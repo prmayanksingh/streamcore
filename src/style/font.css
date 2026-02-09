@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'monument';
+  src: url('../assets/fonts/MonumentExtended-Regular.otf');
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('../assets/fonts/Gilroy-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'funnel';
+  src: url('../assets/fonts/FunnelDisplay-VariableFont_wght.ttf');
+}
