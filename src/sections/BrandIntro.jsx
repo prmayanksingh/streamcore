@@ -6,30 +6,30 @@ const BrandIntro = () => {
       <div className="h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
         <div className="flex flex-col md:flex-row items-center">
           <h1 className="text-[5em] md:text-[5em] font-semibold">Design,</h1>{" "}
-          <span className="flex items-center h-[4em] md:h-[4.4em] w-[25em] sm:w-[40em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">tech</h1>{" "}
+          <div className="flex items-center h-[4em] md:h-[4.7em] w-[25em] sm:w-[40em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>{" "}
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">tech</h1>{" "}
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
               tech
             </h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>{" "}
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">tech</h1>{" "}
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
               tech
             </h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
               tech
             </h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[2.4em] md:text-[3em] font-semibold">
+            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
               tech
             </h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>
-          </span>
+          </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-[.8em] leading-[4.5em]">
           <h1 className="text-[5em] md:text-[5em] font-semibold">
@@ -45,7 +45,7 @@ const BrandIntro = () => {
             <i className="ri-play-large-fill"></i>
           </div>
         </div>
-        <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-3 lg:border-dashed lg:border-gray-500">
+        <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424]">
           <div className="relative h-[13em] lg:h-[8em] w-[13em] lg:w-[8em] flex items-center justify-center">
             <img src="../src/assets/images/curved-text.png" className="h-full w-full scale-[230%] bg-cover" alt="curved-text" />
             <img className="absolute h-[3.7em] lg:h-[2.3em]" src="../src/assets/images/spiral.webp" alt="spiral image" />
