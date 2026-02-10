@@ -40,7 +40,7 @@ const BrandIntro = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row-reverse items-center gap-[8em] lg:gap-[3em]">
-        <div className="relative h-[15em] lg:h-[8em] w-[25em] lg:w-[13em] bg-gray-500 rounded-2xl">
+        <div className="relative h-[15em] sm:h-[18em] md:h-[25em] lg:h-[8em] w-[25em] sm:w-[35em] md:w-[40em] lg:w-[13em] bg-gray-500 rounded-2xl">
           <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full">
             <i className="ri-play-large-fill"></i>
           </div>

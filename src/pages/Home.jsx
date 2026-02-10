@@ -2,13 +2,17 @@ import React from "react";
 import BrandIntro from "../sections/BrandIntro";
 import Navbar from "../components/Navbar";
 import Temp from "../sections/Temp";
+import ShowcaseSection from "../sections/ShowcaseSection";
+import AboutSection from "../sections/AboutSection";
 
 const Home = () => {
   return (
     <div>
-        <Navbar/>
+      <Navbar />
       <BrandIntro />
-      <Temp/>
+      <ShowcaseSection />
+      <AboutSection />
+      <Temp />
     </div>
   );
 };
