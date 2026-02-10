@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Temp from "../sections/Temp";
 import ShowcaseSection from "../sections/ShowcaseSection";
 import AboutSection from "../sections/AboutSection";
+import StatsSection from "../sections/StatsSection";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <BrandIntro />
       <ShowcaseSection />
       <AboutSection />
+      <StatsSection />
       <Temp />
     </div>
   );
