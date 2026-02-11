@@ -6,6 +6,8 @@ import ShowcaseSection from "../sections/ShowcaseSection";
 import AboutSection from "../sections/AboutSection";
 import StatsSection from "../sections/StatsSection";
 import Marquee from "../sections/Marquee";
+import PortfolioShowcaseSection from "../sections/PortfolioShowcaseSection";
+import ServicesSection from "../sections/ServicesSection";
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       <AboutSection />
       <StatsSection />
       <Marquee />
+      <PortfolioShowcaseSection />
+      <ServicesSection />
       <Temp />
     </div>
   );
