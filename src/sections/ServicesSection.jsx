@@ -20,6 +20,7 @@ const ServicesSection = () => {
       title2: "Automations",
       description:
         "Intelligent AI-powered solutions that automate workflows, enhance customer experiences, and drive business efficiency.",
+        descriptionColor:"#50501D",
       tags: ["Chatbots", "Workflow", "Automation", "AI Solutions"],
       bgColor: "#FFFF33",
       smallImg: "../src/assets/images/cubeSmall.webp",
@@ -30,15 +31,16 @@ const ServicesSection = () => {
     {
       title1: "Social Media",
       title2: "Management",
-      textColor:"#FAFAFA",
+      textColor: "#FAFAFA",
       description:
         "Strategic social media management and content creation that boosts your brand presence and engages your target audience across all platforms.",
+      descriptionColor: "#ABABAB",
       tags: ["Strategy", "Content", "Engagement", "Community", "Analytics"],
       bgColor: "#1C1C1C",
       smallImg: "../src/assets/images/woodenObjectSmall.webp",
       largeImg: "../src/assets/images/woodenObject.webp",
-      buttonColor: "#1C1C1C",
-      arrowColor: "#161616",
+      buttonColor: "#FAFAFA",
+      arrowColor: "#111",
     },
     {
       title1: "Ad",
