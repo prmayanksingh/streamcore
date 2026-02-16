@@ -8,6 +8,7 @@ import StatsSection from "../sections/StatsSection";
 import Marquee from "../sections/Marquee";
 import PortfolioShowcaseSection from "../sections/PortfolioShowcaseSection";
 import ServicesSection from "../sections/ServicesSection";
+import ApproachSection from "../sections/ApproachSection";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Marquee />
       <PortfolioShowcaseSection />
       <ServicesSection />
+      <ApproachSection />
       <Temp />
     </div>
   );
