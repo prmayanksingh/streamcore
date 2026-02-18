@@ -18,7 +18,7 @@ const ProjectCard = ({ cardDetails }) => {
           ))}
         </div>
       </div>
-      <h1 className="w-[85%] text-gray-500 text-[1.3em] md:text-[1.8em]">
+      <h1 className="w-[85%] text-gray-500 text-[1.4em] md:text-[1.8em]">
         <span className="font-bold text-white">{cardDetails.heading}</span>{" "}
         {cardDetails.description}
       </h1>

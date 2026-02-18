@@ -10,6 +10,7 @@ import ServicesSection from "../sections/ServicesSection";
 import ApproachSection from "../sections/ApproachSection";
 import Work from "../sections/Work";
 import OurProcessSection from "../sections/OurProcessSection";
+import TestimonialsSection from "../sections/TestimonialsSection";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <ApproachSection />
       <Work />
       <OurProcessSection />
+      <TestimonialsSection />
       <Temp />
     </div>
   );

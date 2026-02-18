@@ -57,7 +57,7 @@ const ServicesSection = () => {
   ]);
 
   return (
-    <div className="px-[2em] md:px-[4em] py-[7rem] flex flex-col gap-[5em]">
+    <div className="px-[1.5em] md:px-[4em] py-[7rem] flex flex-col gap-[5em]">
       {services.map((service, index) => (
         <ServiceCard key={index} service={service} />
       ))}

@@ -13,7 +13,7 @@ const ServiceCard = ({ service }) => {
         {service.title1} <br /> {service.title2}
       </h1>
       <div className="z-99 flex flex-col gap-[1.5em] xl:gap-[2em]">
-        <div className="flex flex-wrap gap-[.5em] w-[50%] xl:w-[40%]">
+        <div className="flex flex-wrap gap-[.5em] w-[80%] md:w-[60%] xl:w-[40%]">
           {service.tags.map((tag, index) => (
             <div
               key={index}
@@ -25,7 +25,7 @@ const ServiceCard = ({ service }) => {
           ))}
         </div>
         <p
-          className="text-[1em] xl:text-[1.1em] text-gray-700 lg:w-[50%] xl:w-[40%]"
+          className="text-[1em] xl:text-[1.1em] text-gray-700 md:w-[80%] lg:w-[50%] xl:w-[40%]"
           style={{ color: service.descriptionColor || "#000" }}
         >
           {service.description}
