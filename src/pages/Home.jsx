@@ -27,6 +27,7 @@ const Home = () => {
       <Work />
       <OurProcessSection />
       <TestimonialsSection />
+      <HeroMarquee />
       <Temp />
     </div>
   );

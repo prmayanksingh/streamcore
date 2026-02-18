@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
     },
   ]);
   return (
-    <div className="px-[1.5em] md:px-[3rem] py-[2em] xl:py-[2.5em] xl:pr-0 flex flex-col xl:flex-row gap-[4em]">
+    <div className="px-[1.5em] md:px-[3rem] py-[2em] xl:py-[3em] pb-[4em] xl:pb-[7em] xl:pr-0 flex flex-col xl:flex-row gap-[4em]">
       <div className="w-full xl:w-[40%] flex flex-col gap-[1.5em] xl:gap-[2em]">
         <h1 className="text-[2.7em] md:text-[4.4em] font-semibold leading-none">
           What our clients say
