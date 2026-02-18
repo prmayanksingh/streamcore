@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/* Hide scrollbar arrows */
+.custom-scroll::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Optional: Style scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #9CA3AF;
+    border-radius: 10px;
+}

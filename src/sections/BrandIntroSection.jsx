@@ -6,7 +6,7 @@ const BrandIntroSection = () => {
       <div className="h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
         <div className="flex flex-col md:flex-row items-center">
           <h1 className="text-[5em] md:text-[5em] font-semibold">Design,</h1>{" "}
-          <div className="flex items-center h-[4em] md:h-[4.7em] w-[25em] sm:w-[40em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
+          <div className="flex items-center h-[4em] md:h-[4.7em] w-[25em] sm:w-[39em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
             <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
             <i className="ri-shining-fill text-[1.5em]"></i>{" "}
             <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
