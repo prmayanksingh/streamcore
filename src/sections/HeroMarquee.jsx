@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Marquee = () => {
+const HeroMarquee = () => {
   return (
     <div className='pb-[5rem]'>
         <div className='flex items-center gap-[1.5rem] whitespace-nowrap tracking-widest font-thin text-[#535151] overflow-hidden'>
@@ -16,4 +16,4 @@ const Marquee = () => {
   )
 }
 
-export default Marquee
+export default HeroMarquee

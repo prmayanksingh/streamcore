@@ -1,27 +1,30 @@
-import React from "react";
-import BrandIntro from "../sections/BrandIntro";
+import BrandIntroSection from "../sections/BrandIntroSection";
 import Navbar from "../components/Navbar";
 import Temp from "../sections/Temp";
 import ShowcaseSection from "../sections/ShowcaseSection";
 import AboutSection from "../sections/AboutSection";
 import StatsSection from "../sections/StatsSection";
-import Marquee from "../sections/Marquee";
+import HeroMarquee from "../sections/HeroMarquee";
 import PortfolioShowcaseSection from "../sections/PortfolioShowcaseSection";
 import ServicesSection from "../sections/ServicesSection";
 import ApproachSection from "../sections/ApproachSection";
+import Work from "../sections/Work";
+import OurProcessSection from "../sections/OurProcessSection";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <BrandIntro />
+      <BrandIntroSection />
       <ShowcaseSection />
       <AboutSection />
       <StatsSection />
-      <Marquee />
+      <HeroMarquee />
       <PortfolioShowcaseSection />
       <ServicesSection />
       <ApproachSection />
+      <Work />
+      <OurProcessSection />
       <Temp />
     </div>
   );

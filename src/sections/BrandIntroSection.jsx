@@ -1,6 +1,6 @@
 import React from "react";
 
-const BrandIntro = () => {
+const BrandIntroSection = () => {
   return (
     <div className="text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[7em] lg:px-[3em]">
       <div className="h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
@@ -62,4 +62,4 @@ const BrandIntro = () => {
   );
 };
 
-export default BrandIntro;
+export default BrandIntroSection;
