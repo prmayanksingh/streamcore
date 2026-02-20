@@ -11,6 +11,7 @@ import ApproachSection from "../sections/ApproachSection";
 import Work from "../sections/Work";
 import OurProcessSection from "../sections/OurProcessSection";
 import TestimonialsSection from "../sections/TestimonialsSection";
+import ClientsSection from "../sections/ClientsSection";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <OurProcessSection />
       <TestimonialsSection />
       <HeroMarquee />
+      <ClientsSection />
       <Temp />
     </div>
   );
