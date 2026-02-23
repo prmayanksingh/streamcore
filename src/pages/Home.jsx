@@ -12,6 +12,7 @@ import Work from "../sections/Work";
 import OurProcessSection from "../sections/OurProcessSection";
 import TestimonialsSection from "../sections/TestimonialsSection";
 import ClientsSection from "../sections/ClientsSection";
+import BlogSection from "../sections/BlogSection";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
       <TestimonialsSection />
       <HeroMarquee />
       <ClientsSection />
+      <BlogSection />
       <Temp />
     </div>
   );
