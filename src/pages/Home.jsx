@@ -13,6 +13,7 @@ import OurProcessSection from "../sections/OurProcessSection";
 import TestimonialsSection from "../sections/TestimonialsSection";
 import ClientsSection from "../sections/ClientsSection";
 import BlogSection from "../sections/BlogSection";
+import StartProjectSection from "../sections/StartProjectSection";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
       <HeroMarquee />
       <ClientsSection />
       <BlogSection />
+      <StartProjectSection />
       <Temp />
     </div>
   );

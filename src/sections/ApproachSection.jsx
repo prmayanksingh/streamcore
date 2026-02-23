@@ -35,7 +35,7 @@ const ApproachSection = () => {
     },
   ]);
   return (
-    <div className="px-[1.5rem] md:px-[3rem] py-[3rem]">
+    <div className="px-[1.5rem] md:px-[4rem] py-[3rem]">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Approach and <br className="hidden xl:inline" />

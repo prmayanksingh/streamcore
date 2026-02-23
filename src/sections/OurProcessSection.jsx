@@ -29,7 +29,7 @@ const OurProcessSection = () => {
         },
       ]);
   return (
-    <div className="px-[1.5rem] md:px-[3rem] pt-[8rem] pb-[5rem]">
+    <div className="px-[1.5rem] md:px-[4rem] pt-[8rem] pb-[5rem]">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Our Process <br />

@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogCard = ({ blog }) => {
   return (
-    <div className="w-full flex flex-col gap-[1em] items-center">
+    <div className="w-full flex flex-col gap-[1em] items-center cursor-pointer">
       <div
         className="relative h-[28em] md:h-[34em] xl:h-[27em] w-full bg-center bg-cover rounded-4xl flex items-end overflow-hidden group"
         style={{ backgroundImage: `url('${blog.img}')` }}
