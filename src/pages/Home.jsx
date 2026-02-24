@@ -14,6 +14,7 @@ import TestimonialsSection from "../sections/TestimonialsSection";
 import ClientsSection from "../sections/ClientsSection";
 import BlogSection from "../sections/BlogSection";
 import StartProjectSection from "../sections/StartProjectSection";
+import FooterSection from "../sections/footerSection";
 
 const Home = () => {
   return (
@@ -27,14 +28,15 @@ const Home = () => {
       <PortfolioShowcaseSection />
       <ServicesSection />
       <ApproachSection />
-      <Work />
+      {/* <Work /> */}
       <OurProcessSection />
       <TestimonialsSection />
       <HeroMarquee />
       <ClientsSection />
       <BlogSection />
       <StartProjectSection />
-      <Temp />
+      <FooterSection />
+      {/* <Temp /> */}
     </div>
   );
 };
