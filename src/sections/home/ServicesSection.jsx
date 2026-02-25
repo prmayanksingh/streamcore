@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../../components/ServiceCard";
 
 const ServicesSection = () => {
   const [services, setServices] = useState([

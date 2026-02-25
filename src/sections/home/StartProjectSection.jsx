@@ -1,9 +1,9 @@
 import React from 'react'
-import StartProject from '../components/StartProject'
+import StartProject from '../../components/StartProject'
 
 const StartProjectSection = () => {
   return (
-    <div className='h-[50em] md:h-[65em] lg:h-[69em] px-[1.5em] md:px-[4em] py-[5em] pb-[2em] flex flex-col items-center justify-between'>
+    <div className='h-[50em] md:h-[65em] lg:h-[72em] px-[1.5em] md:px-[4em] py-[5em] pb-[2em] flex flex-col items-center justify-between'>
         <StartProject />
         <h1 className='sticky bottom-0 text-white text-[11.5vw] md:text-[11vw] lg:text-[11.5vw] xl:text-[12vw] font-bold'>Whizoid Studio</h1>
     </div>

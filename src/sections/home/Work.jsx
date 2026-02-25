@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WorkCard from "../components/WorkCard";
+import WorkCard from "../../components/WorkCard";
 
 const Work = () => {
   const [images, setImages] = useState([

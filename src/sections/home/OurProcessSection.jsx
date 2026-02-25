@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProcessSteps from "../components/ProcessSteps";
+import ProcessSteps from "../../components/ProcessSteps";
 
 const OurProcessSection = () => {
     const [data, setData] = useState([

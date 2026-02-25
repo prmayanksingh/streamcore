@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Approachbox from "../components/Approachbox";
+import Approachbox from "../../components/Approachbox";
 
 const ApproachSection = () => {
   const [data, setData] = useState([

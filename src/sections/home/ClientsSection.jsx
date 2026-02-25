@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ClientLogoCard from "../components/ClientLogoCard";
+import ClientLogoCard from "../../components/ClientLogoCard";
 
 const ClientsSection = () => {
   const [images, setImages] = useState([
