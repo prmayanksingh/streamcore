@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import HeroSection from '../sections/services/HeroSection'
+import StatsSection from '../sections/services/StatsSection'
 import Temp from '../sections/Temp'
 
 const Services = () => {
@@ -7,6 +8,7 @@ const Services = () => {
     <div>
       <Navbar />
       <HeroSection />
+      <StatsSection />
       <Temp/>
     </div>
   )
