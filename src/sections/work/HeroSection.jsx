@@ -7,7 +7,7 @@ const HeroSection = () => {
         <i className="ri-shining-fill"></i> Works
       </h5>
       <h1 className="w-fit text-[3.9em] md:text-[5.5em] xl:text-[6em] leading-[1.1em] xl:leading-[1.2em] font-semibold">
-        Where bold ideas take shape
+        Where bold ideas <br className="hidden xl:inline" /> take shape
       </h1>
     </section>
   );
