@@ -10,7 +10,7 @@ const ServiceOverviewCard = ({ job }) => {
         <p className="xl:w-[50%] text-[1.1em] xl:text-[1.2em] text-[#A1A1A1]">
           {job.description}
         </p>
-        <div className="text-[1.1em] xl:text-[1.2em] flex flex-col text-[#A1A1A1]">
+        <div className="text-[1.1em] xl:text-[1.2em] xl:text-right flex flex-col text-[#A1A1A1]">
           {job.roles.map((role, index) => (
             <h1 key={index}>{role}</h1>
           ))}

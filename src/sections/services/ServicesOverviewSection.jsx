@@ -57,29 +57,14 @@ const ServicesOverviewSection = () => {
       ],
     },
     {
-      title: "Influencer Marketing",
+      title: "Contractual Resources",
       description:
-        "Connect with the right influencers to amplify your brand message and reach targeted audiences through authentic partnerships.",
+        "Skilled contractual resources for your project needs. Scale your team quickly with vetted professionals who integrate seamlessly and deliver results without long-term commitments.",
       roles: [
-        "Partnerships",
-        "Campaign Management",
-        "Brand Ambassadors",
-        "Social Reach",
-        "Analytics",
-        "ROI Tracking",
-      ],
-    },
-    {
-      title: "UI/UX Designing",
-      description:
-        "User-centered design that creates intuitive, engaging experiences. From wireframes to final designs that users love.",
-      roles: [
-        "User Research",
-        "Wireframing",
-        "Prototyping",
-        "Visual Design",
-        "Usability Testing",
-        "Design Systems",
+        "Contract Hiring",
+        "Dedicated Teams",
+        "Remote Talent",
+        "Flexible Engagement",
       ],
     },
   ]);

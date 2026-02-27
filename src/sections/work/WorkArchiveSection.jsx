@@ -4,115 +4,34 @@ import WorkArchiveItem from "../../components/WorkArchiveItem";
 const WorkArchiveSection = () => {
   const [data, setdata] = useState([
     {
-      title: "11:11",
+      title: "RJ PERFUMES",
       date: "January 2025",
-      roles: [
-        "Social Media",
-        "Ad Production",
-        "Influencer Marketing",
-        "Website Development",
-        "Branding",
-      ],
+      roles: ["Web Design", "Landing Page", "Responsive"],
     },
     {
-      title: "Charge Up",
+      title: "RACEWOOD SERVICES",
       date: "February 2025",
-      roles: [
-        "Ad Production",
-        "Social Media",
-        "Influencer Marketing",
-        "Branding",
-      ],
+      roles: ["Web Design", "Services", "Digital Solutions"],
     },
     {
-      title: "Cleaning Chief",
+      title: "SEASONS PROPERTIES",
       date: "March 2025",
-      roles: [
-        "Lead Generaion",
-        "Ad Production",
-        "Social Media",
-        "AI Agents",
-        "CRM Automation",
-      ],
+      roles: ["Services", "Web Development", "Custom Solution"],
     },
     {
-      title: "Danik Bhaskar",
+      title: "NISARA BEAUTY",
       date: "April 2025",
-      roles: ["Graphics Design", "Ad Production", "Strategy Planning"],
+      roles: ["Service", "Web Design", "Landing Page"],
     },
     {
-      title: "11:11",
+      title: "LOCAL MAFIA",
       date: "January 2025",
-      roles: [
-        "Social Media",
-        "Ad Production",
-        "Influencer Marketing",
-        "Website Development",
-        "Branding",
-      ],
+      roles: ["Service", "Web Design", "Web Development"],
     },
     {
-      title: "Charge Up",
+      title: "ELEGANCE RETREAT",
       date: "February 2025",
-      roles: [
-        "Ad Production",
-        "Social Media",
-        "Influencer Marketing",
-        "Branding",
-      ],
-    },
-    {
-      title: "Cleaning Chief",
-      date: "March 2025",
-      roles: [
-        "Lead Generaion",
-        "Ad Production",
-        "Social Media",
-        "AI Agents",
-        "CRM Automation",
-      ],
-    },
-    {
-      title: "Danik Bhaskar",
-      date: "April 2025",
-      roles: ["Graphics Design", "Ad Production", "Strategy Planning"],
-    },
-    {
-      title: "11:11",
-      date: "January 2025",
-      roles: [
-        "Social Media",
-        "Ad Production",
-        "Influencer Marketing",
-        "Website Development",
-        "Branding",
-      ],
-    },
-    {
-      title: "Charge Up",
-      date: "February 2025",
-      roles: [
-        "Ad Production",
-        "Social Media",
-        "Influencer Marketing",
-        "Branding",
-      ],
-    },
-    {
-      title: "Cleaning Chief",
-      date: "March 2025",
-      roles: [
-        "Lead Generaion",
-        "Ad Production",
-        "Social Media",
-        "AI Agents",
-        "CRM Automation",
-      ],
-    },
-    {
-      title: "Danik Bhaskar",
-      date: "April 2025",
-      roles: ["Graphics Design", "Ad Production", "Strategy Planning"],
+      roles: ["Service", "Responsive", "Web Design"],
     },
   ]);
   return (

@@ -4,57 +4,46 @@ import ProjectCard from "../../components/ProjectCard";
 const PortfolioShowcaseSection = () => {
   const [ProjectCardDetails, setProjectCardDetails] = useState([
     {
-      imageSrc: "../src/assets/images/Elvn-Elvn.webp",
-      heading: "11:11",
-      description: "Digital strategy for premium protein bar brand",
-      tags: [
-        "Social Media",
-        "Ad Production",
-        "Influencer Marketing",
-        "Website Development",
-        "Branding",
-      ],
+      imageSrc: "../src/assets/images/projects/RJ_PERFUMES.PNG",
+      heading: "RJ PERFUMES",
+      description:
+        "A comprehensive e-commerce platform with a modern design and user-friendly interface.",
+      tags: ["Web Design", "Landing Page", "Responsive"],
     },
     {
-      imageSrc: "../src/assets/images/chargeup.webp",
-      heading: "Charge Up",
-      description: "EV charging infrastructure brand building",
-      tags: [
-        "Ad Production",
-        "Social Media",
-        "Influencer Marketing",
-        "Branding",
-      ],
+      imageSrc: "../src/assets/images/projects/GRACEWOOD_SERVICES.PNG",
+      heading: "GRACEWOOD SERVICES",
+      description:
+        "Air conditioning services website with booking and service management features.",
+      tags: ["Web Design", "Services", "Digital Solutions"],
     },
     {
-      imageSrc: "../src/assets/images/cleaningChief.webp",
-      heading: "Cleaning Chief",
-      description: "AI-powered lead generation for cleaning services",
-      tags: [
-        "Lead Generation",
-        "Ad Production",
-        "Social Media",
-        "AI Agents",
-        "CRM Automation",
-      ],
+      imageSrc: "../src/assets/images/projects/SEASONS_PROPERTIES.PNG",
+      heading: "SEASONS PROPERTIES",
+      description:
+        "Custom real estate solution with advanced features and payment integration.",
+      tags: ["Services", "Web Development", "Custom Solution"],
     },
     {
-      imageSrc: "../src/assets/images/DainikBhaskar.webp",
-      heading: "Dainik Bhaskar",
-      description: "Strategic ad campaigns for leading newspaper",
-      tags: ["Graphics Design", "Ad Production", "Strategy Planning"],
+      imageSrc: "../src/assets/images/projects/NISARA_BEAUTY.PNG",
+      heading: "NISARA BEAUTY",
+      description:
+        "Modern perfume website with a beautiful and responsive design.",
+      tags: ["Service", "Web Design", "Landing Page"],
     },
     {
-      imageSrc: "../src/assets/images/exicom.webp",
-      heading: "Exicom",
-      description: "Complete marketing for EV charging solutions",
-      tags: [
-        "Social Media",
-        "Ad Production",
-        "Influencer Marketing",
-        "Graphics Design",
-        "Event Design",
-      ],
+      imageSrc: "../src/assets/images/projects/LOCAL_MAFIA.PNG",
+      heading: "LOCAL MAFIA",
+      description:
+        "Modern e-commerce website with a beautiful and responsive design.",
+      tags: ["Service", "Web Design", "Web Development"],
+    },
+    {
+      imageSrc: "../src/assets/images/projects/ELEGANCE_RETREAT.PNG",
+      heading: "ELEGANCE RETREAT",
+      description:
+        "Modern hotel website with a beautiful and responsive design.",
+      tags: ["Service", "Responsive", "Web Design"],
     },
   ]);
 

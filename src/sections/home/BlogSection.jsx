@@ -4,21 +4,21 @@ import BlogCard from "../../components/BlogCard";
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([
     {
-      img: "../src/assets/images/blogImg/ugc-marketing-strategy.png",
+      img: "../src/assets/images/blogImg/blockchain.jpg",
       title:
-        "UGC Marketing: How Brands Are Turning Customers Into Content Creators",
-      tags: ["UGC", "Content Marketing"],
+        "Short Guide on the Potential of Blockchain for Businesses",
+      tags: ["Blockchain", "Business Technology"],
     },
     {
-      img: "../src/assets/images/blogImg/restaurant-instagram-marketing.png",
-      title: "Restaurant Marketing on Instagram: A Complete 2025 Playbook",
-      tags: ["Restaurant Marketing", "Instagram"],
+      img: "../src/assets/images/blogImg/digitalMarketing.jpg",
+      title: "Boost Your Online Presence with Digital Marketing Services",
+      tags: ["Digital Marketing", "Online Growth"],
     },
     {
-      img: "../src/assets/images/blogImg/fmcg-social-media-marketing.png",
+      img: "../src/assets/images/blogImg/customApp.jpg",
       title:
-        "Social Media Marketing for FMCG Brands: Winning Strategies in 2025",
-      tags: ["Social Media", "FMCG"],
+        "Why Every Business Needs Custom Application Development in 2025?",
+      tags: ["Custom Software", "App Development"],
     },
   ]);
   return (

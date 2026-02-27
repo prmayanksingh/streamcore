@@ -7,7 +7,7 @@ const HeroSection = () => {
         <i className="ri-shining-fill"></i> Services
       </h5>
       <h1 className="w-fit text-[3.9em] md:text-[5.5em] xl:text-[6em] leading-[1.1em] xl:leading-[1.2em] font-semibold">
-        New standards in digital excellence
+        Technology Expertise You Can Trust
       </h1>
     </section>
   );

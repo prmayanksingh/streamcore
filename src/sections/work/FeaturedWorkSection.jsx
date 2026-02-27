@@ -4,29 +4,34 @@ import FeaturedWorkCard from "../../components/FeaturedWorkCard";
 const FeaturedWorkSection = () => {
   const [data, setData] = useState([
     {
-      title: "11:11",
-      tags: ["Social Media", "Ad Production", "Influencer Marketing", "Website Development", "Branding"],
-      img: "../src/assets/images/Elvn-Elvn.webp"
+      img: "../src/assets/images/projects/RJ_PERFUMES.PNG",
+      title: "RJ PERFUMES",
+      tags: ["Web Design", "Landing Page", "Responsive"],
     },
     {
-      title: "Charge Up",
-      tags: ["Ad Production", "Social Media", "Influencer Marketing", "Branding"],
-      img: "../src/assets/images/chargeup.webp"
+      img: "../src/assets/images/projects/GRACEWOOD_SERVICES.PNG",
+      title: "GRACEWOOD SERVICES",
+      tags: ["Web Design", "Services", "Digital Solutions"],
     },
     {
-      title: "Cleaning Chief",
-      tags: ["Lead Generation", "Ad Production", "Social Media", "AI Agents", "CRM Automation"],
-      img: "../src/assets/images/cleaningChief.webp"
+      img: "../src/assets/images/projects/SEASONS_PROPERTIES.PNG",
+      title: "SEASONS PROPERTIES",
+      tags: ["Services", "Web Development", "Custom Solution"],
     },
     {
-      title: "11:11",
-      tags: ["Graphics Design", "Ad Production", "Strategy Planning"],
-      img: "../src/assets/images/DainikBhaskar.webp"
+      img: "../src/assets/images/projects/NISARA_BEAUTY.PNG",
+      title: "NISARA BEAUTY",
+      tags: ["Service", "Web Design", "Landing Page"],
     },
     {
-      title: "Exicom",
-      tags: ["Social Media", "Ad Production", "Influencer Marketing", "Graphics Design", "Event Design"],
-      img: "../src/assets/images/exicom.webp"
+      img: "../src/assets/images/projects/LOCAL_MAFIA.PNG",
+      title: "LOCAL MAFIA",
+      tags: ["Service", "Web Design", "Web Development"],
+    },
+    {
+      img: "../src/assets/images/projects/ELEGANCE_RETREAT.PNG",
+      title: "ELEGANCE RETREAT",
+      tags: ["Service", "Responsive", "Web Design"],
     },
   ]);
 

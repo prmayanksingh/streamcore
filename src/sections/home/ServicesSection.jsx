@@ -54,6 +54,19 @@ const ServicesSection = () => {
       buttonColor: "#1A66FF",
       arrowColor: "#F3F7FF",
     },
+    {
+      title1: "Contractual",
+      title2: "Resources",
+      description:
+        "Skilled contractual resources for your project needs. Scale your team quickly with vetted professionals who integrate seamlessly and deliver results without long-term commitments.",
+        descriptionColor:"#50501D",
+      tags: ["Contract Hiring", "Dedicated Teams", "Remote Talent", "Flexible Engagement"],
+      bgColor: "#FFFF33",
+      smallImg: "../src/assets/images/cubeSmall.webp",
+      largeImg: "../src/assets/images/cubes.webp",
+      buttonColor: "#161616",
+      arrowColor: "#FCFCFC",
+    },
   ]);
 
   return (

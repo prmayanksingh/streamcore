@@ -2,13 +2,14 @@ import "../style/font.css";
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-999 px-[2rem] md:px-[3rem] lg:px-[3.8rem] py-[1.5rem] md:py-[2rem] lg:py-[2.2rem] flex justify-between items-center text-[clamp(.5em,3vw,1em)]">
-      <div>
-        <h1 className="text-[1.5em] md:text-[2em] font-[monument] font-bold tracking-widest">
+      <div className="w-[12em] md:w-[14em] h-full">
+        <img src="../src/assets/images/StreamCoreLogo.png" alt="" />
+        {/* <h1 className="text-[1.5em] md:text-[2em] font-[monument] font-bold tracking-widest">
           WHIZOID
         </h1>
         <h6 className="text-[.6em] md:text-[.7em] tracking-widest text-center font-[monument]">
           STUDIO
-        </h6>
+        </h6> */}
       </div>
       <div className="flex items-center gap-[1em] md:gap-[1.5em]">
         <div className="backdrop-blur-md h-fit px-[.9em] md:px-[.8em] py-[.6em] md:py-[.4em] rounded-full">

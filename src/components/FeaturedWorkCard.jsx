@@ -3,7 +3,7 @@ import React from "react";
 const FeaturedWorkCard = ({ cardData }) => {
   return (
     <div
-      className="sticky top-30 w-full h-[36em] px-[1.8em] md:px-[3em] py-[2.3em] md:py-[3em] flex flex-col justify-between rounded-[2em] overflow-hidden"
+      className="relative sticky top-30 w-full h-[36em] px-[1.8em] md:px-[3em] py-[2.3em] md:py-[3em] flex flex-col justify-between rounded-[2em] overflow-hidden"
       style={{
         backgroundColor: cardData.bgColor || "#FAF7F6",
         backgroundImage: `url(${cardData.img})`,
@@ -13,7 +13,8 @@ const FeaturedWorkCard = ({ cardData }) => {
         color: "#fff",
       }}
     >
-      <div className="flex flex-wrap gap-[.5em] w-[90%] md:w-[80%]">
+      <div className="absolute h-[36em] w-full top-0 left-0 -translate-X-[50%] -translate-Y-[50%] bg-black/40"></div>
+      <div className="z-100 flex flex-wrap gap-[.5em] w-[90%] md:w-[80%]">
         {cardData.tags.map((tag, index) => (
           <div
             key={index}
@@ -24,7 +25,7 @@ const FeaturedWorkCard = ({ cardData }) => {
         ))}
       </div>
 
-      <h1 className="z-99 text-[2.3em] md:text-[4.5em] font-semibold leading-[1.2em]">
+      <h1 className="z-100 text-[2.3em] md:text-[4.5em] font-semibold leading-[1.2em]">
         {cardData.title}
       </h1>
     </div>

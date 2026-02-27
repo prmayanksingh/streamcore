@@ -9,7 +9,7 @@ const AboutSection = () => {
       </div>
       <div className="h-[80%] lg:h-full lg:w-[50%] flex flex-col gap-[3em] md:gap-[3.9em] lg:gap-[3.4em]">
         <h1 className="text-[1.8em] md:text-[2.8em] lg:text-[2.5em] xl:text-[2.6em] tracking-wide font-light">
-          At Whizoid Studio, we utilize art and technology to enhance brand
+          At Stream Core, we utilize art and technology to enhance brand
           growth. We specialize in Software Development, AI Agents &
           Automations, Social Media Management, Ad Production, Influencer
           Marketing, and UI/UX Designing. We deliver innovative solutions that
