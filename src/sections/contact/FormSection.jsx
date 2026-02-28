@@ -1,0 +1,80 @@
+import React from "react";
+import { useForm } from "react-hook-form";
+
+const FormSection = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const loginHandler = (data) => {
+    console.log(data);
+    reset();
+  };
+
+  return (
+    <section className="px-[1.5em] md:px-[4em] py-[5em] xl:flex xl:gap-[10em]">
+      <h5 className="w-[6.5em]"></h5>
+      <form
+        onSubmit={handleSubmit(loginHandler)}
+        className="xl:w-[70%] flex flex-col gap-[2em]"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2em]">
+          <input
+            required
+            {...register("name", {
+              required: "Name is required",
+              pattern: {
+                value: /^[A-Za-z\s]+$/,
+                message: "Only letters are allowed",
+              },
+            })}
+            className="border-b-2 border-gray-500 focus:border-white text-[1.4em] font-light py-[.5em] outline-none"
+            type="text"
+            placeholder="Your name*"
+          />
+          <input
+            {...register("company name")}
+            className="border-b-2 border-gray-500 focus:border-white text-[1.4em] font-light py-[.5em] outline-none"
+            type="text"
+            placeholder="Company name"
+          />
+          <input
+            required
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Enter a valid email address",
+              },
+            })}
+            className="border-b-2 border-gray-500 focus:border-white text-[1.4em] font-light py-[.5em] outline-none"
+            type="email"
+            placeholder="Email*"
+          />
+          <input
+            {...register("phone", {
+              required: "Phone number is required",
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: "Phone number must be 10 digits",
+              },
+            })}
+            className="border-b-2 border-gray-500 focus:border-white text-[1.4em] font-light py-[.5em] outline-none"
+            type="text"
+            placeholder="Phone"
+          />
+        </div>
+        <textarea
+          required
+          {...register("description", { required: "description is required" })}
+          className="h-[7em] md:h-[10em] border-b-2 border-gray-500 focus:border-white text-[1.4em] font-light py-[.5em] outline-none resize-none"
+          type="text"
+          placeholder="A few words about your project*"
+        />
+        <button className="w-fit bg-white text-black text-[1.5em] md:text-[1.7em] px-[.9em] md:px-[1.1em] py-[.3em] md:py-[.5em] rounded-full">
+          Submit <i className="ri-arrow-right-up-line"></i>
+        </button>
+      </form>
+    </section>
+  );
+};
+
+export default FormSection;
