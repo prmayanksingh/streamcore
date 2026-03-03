@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const StatsSection = () => {
   return (
@@ -13,10 +14,12 @@ const StatsSection = () => {
           </div>
           <div className="z-99">
             <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
-              <h1 className="text-[1.4em] font-semibold">
-                Work With Us{" "}
-                <i className="ri-arrow-right-up-line text-[1.3em]"></i>
-              </h1>
+              <Link to={"/contact"}>
+                <h1 className="text-[1.4em] font-semibold">
+                  Work With Us{" "}
+                  <i className="ri-arrow-right-up-line text-[1.3em]"></i>
+                </h1>
+              </Link>
             </div>
           </div>
           <img
@@ -56,10 +59,12 @@ const StatsSection = () => {
           </div>
           <div className="z-99">
             <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
+              <Link to={"/aboutus"}>
               <h1 className="text-[1.4em] font-semibold flex items-center gap-[.3em]">
                 Our Story{" "}
                 <i className="ri-arrow-right-down-line text-[1.3em]"></i>
               </h1>
+              </Link>
             </div>
           </div>
           <img
@@ -77,10 +82,12 @@ const StatsSection = () => {
           </div>
           <div className="z-99">
             <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
+              <Link to={"/work"}>
               <h1 className="text-[1.4em] font-semibold flex items-center gap-[.3em]">
                 View Work{" "}
                 <i className="ri-arrow-right-up-line text-[1.3em]"></i>
               </h1>
+              </Link>
             </div>
           </div>
           <img

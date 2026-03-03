@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const StartProject = () => {
   return (
@@ -7,10 +8,10 @@ const StartProject = () => {
         <i className="ri-poker-hearts-fill text-[.9em]"></i> Let's talk about{" "}
         <br className="hidden xl:inline" /> your next project!
       </h1>
-      <div className="z-100 w-fit h-fit px-[1.4em] md:px-[2em] py-[.3em] md:py-[1em] bg-blue-600 text-white flex items-center gap-[.5em] rounded-full">
+      <Link to={"/contact"} className="z-100 w-fit h-fit px-[1.4em] md:px-[2em] py-[.3em] md:py-[1em] bg-blue-600 text-white flex items-center gap-[.5em] rounded-full">
         <h1 className="text-[1.4em] md:text-[1.8em]">Get Started</h1>
         <i className="ri-arrow-right-up-line text-[1.8em]"></i>
-      </div>
+      </Link>
       <img
         className="z-99 h-[100vw] xl:h-[70vw] absolute top-0 xl:top-[-12em] right-[-5em] xl:right-[0]"
         src="../src/assets/images/contact/blurCube.webp"

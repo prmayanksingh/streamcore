@@ -1,34 +1,120 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const BrandIntroSection = () => {
+  const heartRef = useRef();
+  const astroRef = useRef();
+  const cubeRef = useRef();
+  const techRef = useRef();
+
+  useEffect(() => {
+    // Heart Scale animation
+    gsap.to(heartRef.current, {
+      scale: 1.1,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    // Astro up & down
+    gsap.to(astroRef.current, {
+      y: -20,
+      duration: 1.4,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    // Cube rotate
+    gsap.to(cubeRef.current, {
+      rotate: 360,
+      duration: 4,
+      repeat: -1,
+      ease: "linear",
+    });
+
+    // tech marquee animation
+    const tech = techRef.current;
+    const firstSetWidth = tech.children[0].offsetWidth;
+    gsap.to(tech, {
+      x: -firstSetWidth,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+    });
+  }, []);
+
   return (
-    <div className="text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[7em] lg:px-[3em]">
-      <div className="h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
+    <div className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[2em] lg:gap-[7em] lg:px-[3em]">
+      <div className="z-100 h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
         <div className="flex flex-col md:flex-row items-center">
-          <h1 className="text-[5em] md:text-[5em] font-semibold">Design,</h1>{" "}
+          <h1 className="text-[5em] md:text-[5em] font-semibold">Design ,</h1>{" "}
           <div className="flex items-center h-[4em] md:h-[4.7em] w-[25em] sm:w-[39em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>{" "}
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
-              tech
-            </h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>{" "}
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">tech</h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
-              tech
-            </h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
-              tech
-            </h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[4em] md:text-[4.2em] font-semibold">
-              tech
-            </h1>{" "}
-            <i className="ri-shining-fill text-[1.5em]"></i>
+            <div ref={techRef} className="flex items-center gap-[1em]">
+              {/* first set */}
+              <div className="flex items-center gap-[1em]">
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>{" "}
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>{" "}
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[1.5em]"></i>
+              </div>
+              {/*  second set */}
+              <div className="flex items-center gap-[1em]">
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>{" "}
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>{" "}
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[2em]"></i>
+                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                  tech
+                </h1>{" "}
+                <i className="ri-shining-fill text-[1.5em]"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-[.8em] leading-[4.5em]">
@@ -40,24 +126,68 @@ const BrandIntroSection = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row-reverse items-center gap-[8em] lg:gap-[3em]">
-        <div className="relative h-[15em] sm:h-[18em] md:h-[25em] lg:h-[8em] w-[25em] sm:w-[35em] md:w-[40em] lg:w-[13em] bg-gray-500 rounded-2xl">
+        <div className="relative h-[15em] sm:h-[18em] md:h-[25em] lg:h-[8em] w-[25em] sm:w-[35em] md:w-[40em] lg:w-[13em] bg-gray-500 rounded-2xl overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="../src/assets/spiralVideo.mp4" type="video/mp4" />
+          </video>
           <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full">
             <i className="ri-play-large-fill"></i>
           </div>
         </div>
         <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424]">
           <div className="relative h-[13em] lg:h-[8em] w-[13em] lg:w-[8em] flex items-center justify-center">
-            <img src="../src/assets/images/curved-text.png" className="h-full w-full scale-[230%] bg-cover" alt="curved-text" />
-            <img className="absolute h-[3.7em] lg:h-[2.3em]" src="../src/assets/images/spiral.webp" alt="spiral image" />
+            <img
+              src="../src/assets/images/curved-text.png"
+              className="h-full w-full scale-[230%] bg-cover"
+              alt="curved-text"
+            />
+            <img
+              className="absolute h-[3.7em] lg:h-[2.3em]"
+              src="../src/assets/images/spiral.webp"
+              alt="spiral image"
+            />
           </div>
-          <h3 className="text-[1.4em] lg:text-[.8em] lg:w-[35%] font-light">We craft digital experiences that blend creativity with technology to help brands grow and succeed.</h3>
+          <h3 className="text-[1.4em] lg:text-[.8em] lg:w-[35%] font-light">
+            We craft digital experiences that blend creativity with technology
+            to help brands grow and succeed.
+          </h3>
           <div className="text-[1.3em] lg:text-[.7em] font-light">
-            <h3><i className="ri-shining-fill text-[.8em]"></i> Innovative</h3>
-            <h3><i className="ri-shining-fill text-[.8em]"></i> Creative</h3>
-            <h3><i className="ri-shining-fill text-[.8em]"></i> Results-Driven</h3>
+            <h3>
+              <i className="ri-shining-fill text-[.8em]"></i> Innovative
+            </h3>
+            <h3>
+              <i className="ri-shining-fill text-[.8em]"></i> Creative
+            </h3>
+            <h3>
+              <i className="ri-shining-fill text-[.8em]"></i> Results-Driven
+            </h3>
           </div>
         </div>
       </div>
+      <img
+        ref={heartRef}
+        className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[13em] right-[72%] lg:right-[73%] xl:right-[70%] top-[7%] lg:top-[0%] xl:top-[-5%]"
+        src="../src/assets/images/brandIntro/heart.webp"
+        alt="Heart Image"
+      />
+      <img
+        ref={astroRef}
+        className="hidden md:inline absolute z-101 h-[9em] lg:h-[8em] xl:h-[10em] left-[73%] xl:left-[68%] top-[4%] lg:top-[-7%]"
+        src="../src/assets/images/brandIntro/astroHelmet.webp"
+        alt="AstroHelmet Image"
+      />
+      <img
+        ref={cubeRef}
+        className="hidden md:inline absolute z-101 h-[7em] right-[45%] top-[22%] lg:top-[39%]"
+        src="../src/assets/images/brandIntro/cube.webp"
+        alt="cube Image"
+      />
     </div>
   );
 };

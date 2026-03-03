@@ -1,9 +1,28 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 
 const Approachbox = ({ item }) => {
+  const imgRef = useRef(null);
+  const tl = useRef(null);
+
+  useEffect(() => {
+    tl.current = gsap.timeline({ paused: true });
+
+    tl.current.to(imgRef.current, {
+      rotate: "+=360",
+      duration: 2,
+      repeat: -1,
+      ease: "none",
+    });
+  }, []);
+
   return (
-    <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.88em]">
-      <div>
+    <div
+      onMouseEnter={() => tl.current.play()}
+      onMouseLeave={() => tl.current.pause()}
+      className="flex flex-col xl:flex-row xl:justify-between gap-[1.88em]"
+    >
+      <div ref={imgRef}>
         <img className="h-[4.5em]" src={item.img} alt={item.title + " image"} />
       </div>
       <div className="flex flex-col xl:flex-row xl:gap-[3em] gap-[1em]">

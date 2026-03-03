@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
+import { Link } from "react-router-dom";
 
 const PortfolioShowcaseSection = () => {
   const [ProjectCardDetails, setProjectCardDetails] = useState([
@@ -59,10 +60,10 @@ const PortfolioShowcaseSection = () => {
             designs
           </p>
         </div>
-        <div className="w-fit px-[1.5em] py-[.2em] flex items-center gap-[.5em] border-2 rounded-full">
+        <Link to={"/work"} className="w-fit px-[1.5em] py-[.2em] flex items-center gap-[.5em] border-2 rounded-full">
           <h1 className="text-[1.4em]">View All Works</h1>
           <i className="ri-arrow-right-up-line text-[2em]"></i>
-        </div>
+        </Link>
       </div>
       <div className="flex flex-col gap-[4em]">
         {ProjectCardDetails.map((cardDetails, index) => (

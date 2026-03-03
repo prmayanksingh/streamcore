@@ -13,6 +13,7 @@ import ClientsSection from "../sections/home/ClientsSection";
 import BlogSection from "../sections/home/BlogSection";
 import StartProjectSection from "../sections/home/StartProjectSection";
 import FooterSection from "../sections/home/FooterSection";
+import Temp from "../sections/Temp";
 
 const Home = () => {
   return (
