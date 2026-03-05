@@ -20,10 +20,15 @@ const Approachbox = ({ item }) => {
     <div
       onMouseEnter={() => tl.current.play()}
       onMouseLeave={() => tl.current.pause()}
-      className="flex flex-col xl:flex-row xl:justify-between gap-[1.88em]"
+      className="py-[3em] md:py-[4em] xl:py-[5em] flex flex-col xl:flex-row xl:justify-between gap-[1.88em]"
     >
-      <div ref={imgRef}>
-        <img className="h-[4.5em]" src={item.img} alt={item.title + " image"} />
+      <div>
+        <img
+          ref={imgRef}
+          className="h-[4.5em]"
+          src={item.img}
+          alt={item.title + " image"}
+        />
       </div>
       <div className="flex flex-col xl:flex-row xl:gap-[3em] gap-[1em]">
         <h1 className="text-[1.4em] xl:text-[1.8em] font-semibold">

@@ -1,7 +1,11 @@
-import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
+import FlipLink from "../../components/ui/FlipLink";
 
 const StatsSection = () => {
+  const flipRef1 = useRef(null);
+  const flipRef2 = useRef(null);
+  const flipRef3 = useRef(null);
   return (
     <div className="px-[1.8em] md:px-[4em] xl:px-[4.3em] py-[8em] flex flex-col gap-[2.5em] xl:gap-[1.9em]">
       <div className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em] text-black">
@@ -13,14 +17,18 @@ const StatsSection = () => {
             </h4>
           </div>
           <div className="z-99">
-            <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
-              <Link to={"/contact"}>
-                <h1 className="text-[1.4em] font-semibold">
-                  Work With Us{" "}
-                  <i className="ri-arrow-right-up-line text-[1.3em]"></i>
-                </h1>
-              </Link>
-            </div>
+            <Link
+              to={"/contact"}
+              onMouseEnter={() => flipRef1.current.play()}
+              onMouseLeave={() => flipRef1.current.reverse()}
+              className="btn w-fit rounded-full px-[1em] py-[.5em] border-2 flex text-[1.4em] font-semibold"
+            >
+              <FlipLink
+                ref={flipRef1}
+                text={"Work With Us"}
+                icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+              />
+            </Link>
           </div>
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[21rem] absolute -bottom-34 md:bottom-5 xl:top-0 left-0 xl:-left-20 md:-left-10"
@@ -58,14 +66,18 @@ const StatsSection = () => {
             </h4>
           </div>
           <div className="z-99">
-            <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
-              <Link to={"/aboutus"}>
-              <h1 className="text-[1.4em] font-semibold flex items-center gap-[.3em]">
-                Our Story{" "}
-                <i className="ri-arrow-right-down-line text-[1.3em]"></i>
-              </h1>
-              </Link>
-            </div>
+            <Link
+              to={"/aboutus"}
+              onMouseEnter={() => flipRef2.current.play()}
+              onMouseLeave={() => flipRef2.current.reverse()}
+              className="btn w-fit rounded-full px-[1em] py-[.5em] border-2 flex text-[1.4em] font-semibold"
+            >
+              <FlipLink
+                ref={flipRef2}
+                text={"Our Story"}
+                icon={<i className="ri-arrow-right-down-line text-[1.3em]"></i>}
+              />
+            </Link>
           </div>
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[29rem] absolute -bottom-34 md:bottom-0 xl:bottom-0 left-0 md:left-auto xl:-right-10 md:-right-9"
@@ -81,14 +93,18 @@ const StatsSection = () => {
             </h4>
           </div>
           <div className="z-99">
-            <div className="btn w-fit rounded-full px-[1.4em] py-[.3em] border-2">
-              <Link to={"/work"}>
-              <h1 className="text-[1.4em] font-semibold flex items-center gap-[.3em]">
-                View Work{" "}
-                <i className="ri-arrow-right-up-line text-[1.3em]"></i>
-              </h1>
-              </Link>
-            </div>
+            <Link
+              to={"/work"}
+              onMouseEnter={() => flipRef3.current.play()}
+              onMouseLeave={() => flipRef3.current.reverse()}
+              className="btn w-fit rounded-full px-[1em] py-[.5em] border-2 flex text-[1.4em] font-semibold"
+            >
+              <FlipLink
+                ref={flipRef3}
+                text={"View Work"}
+                icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+              />
+            </Link>
           </div>
           <img
             className="z-98 h-[22rem] md:h-[27rem] xl:h-[17rem] absolute -bottom-34 md:bottom-8 md:left-auto md:-right-15 xl:bottom-10 left-0 xl:-right-15"

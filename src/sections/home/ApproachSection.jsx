@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Approachbox from "../../components/Approachbox";
+import { Link } from "react-router-dom";
+import FlipLink from "../../components/ui/FlipLink";
 
 const ApproachSection = () => {
   const [data, setData] = useState([
@@ -34,6 +36,9 @@ const ApproachSection = () => {
         "Our clients consistently see improved engagement, conversion rates, and business growth.",
     },
   ]);
+
+  const flipRef = useRef(null);
+
   return (
     <div className="px-[1.5rem] md:px-[4rem] py-[3rem]">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
@@ -46,16 +51,25 @@ const ApproachSection = () => {
           <p>Development</p>
           <p>Mastership</p>
         </div>
-        <div className="w-fit h-fit px-[1.4em] py-[.3em] flex items-center gap-[.5em] border-2 rounded-full">
-          <h1 className="text-[1.4em]">Let's Chat</h1>
-          <i className="ri-arrow-right-up-line text-[1.8em]"></i>
-        </div>
+
+        <Link
+          to={"/contact"}
+          onMouseEnter={() => flipRef.current.play()}
+          onMouseLeave={() => flipRef.current.reverse()}
+          className="w-fit h-fit px-[1em] py-[.5em] flex items-center gap-[.5em] border-2 rounded-full text-[1.4em]"
+        >
+          <FlipLink
+            ref={flipRef}
+            text={"Let's Chat"}
+            icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+          />
+        </Link>
       </div>
-      <div className="h-[.1em] w-full my-[4em] xl:my-[5em] bg-white"></div>
+      <div className="h-[.1em] w-full mt-[4em] xl:mt-[5em] bg-white"></div>
       {data.map((item, index) => (
         <React.Fragment key={index}>
           <Approachbox item={item} />
-          <div className="h-[.1em] w-full my-[4.5em] xl:my-[5em] bg-white"></div>
+          <div className="h-[.1em] w-full  bg-white"></div>
         </React.Fragment>
       ))}
     </div>
@@ -63,3 +77,4 @@ const ApproachSection = () => {
 };
 
 export default ApproachSection;
+// my-[4.5em] xl:my-[5em]

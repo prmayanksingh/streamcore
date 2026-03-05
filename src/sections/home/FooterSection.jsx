@@ -1,34 +1,56 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import FlipLink from "../../components/ui/FlipLink";
 
 const FooterSection = () => {
+  const flipRef1 = useRef(null);
+  const flipRef2 = useRef(null);
+  const flipRef3 = useRef(null);
+  const flipRef4 = useRef(null);
+  const flipRef5 = useRef(null);
+
   return (
     <footer className="px-[1.5em] md:px-[4em] pb-[2em] grid grid-cols-1 xl:grid-cols-3 gap-[2em] xl:gap-[1.5em]">
       <div className="h-[25em] md:h-[30em] xl:h-[27em] w-full px-[2em] py-[2.5em] md:px-[3.5em] flex flex-col gap-[.5em] md:gap-[.9em] rounded-2xl bg-[#1C1C1C]">
-        <Link to={"/"}>
-          <h1 className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold">
-            Home
-          </h1>
+        <Link
+          to={"/"}
+          onMouseEnter={() => flipRef1.current.play()}
+          onMouseLeave={() => flipRef1.current.reverse()}
+          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+        >
+          <FlipLink ref={flipRef1} text={"Home"} />
         </Link>
-        <Link to={"/aboutus"}>
-          <h1 className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold">
-            About
-          </h1>
+        <Link
+          to={"/aboutus"}
+          onMouseEnter={() => flipRef2.current.play()}
+          onMouseLeave={() => flipRef2.current.reverse()}
+          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+        >
+          <FlipLink ref={flipRef2} text={"About"} />
         </Link>
-        <Link to={"/work"}>
-          <h1 className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold">
-            Works
-          </h1>
+        <Link
+          to={"/work"}
+          onMouseEnter={() => flipRef3.current.play()}
+          onMouseLeave={() => flipRef3.current.reverse()}
+          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+        >
+          <FlipLink ref={flipRef3} text={"Works"} />
         </Link>
-        <Link to={"/services"}>
-          <h1 className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold">
-            Services
-          </h1>
+        <Link
+          to={"/services"}
+          onMouseEnter={() => flipRef4.current.play()}
+          onMouseLeave={() => flipRef4.current.reverse()}
+          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+        >
+          <FlipLink ref={flipRef4} text={"Services"} />
         </Link>
-        <Link to={"/contact"}>
-          <h1 className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold">
-            Contact
-          </h1>
+        <Link
+          to={"/contact"}
+          onMouseEnter={() => flipRef5.current.play()}
+          onMouseLeave={() => flipRef5.current.reverse()}
+          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+        >
+          <FlipLink ref={flipRef5} text={"Contact"} />
         </Link>
       </div>
       <div className="w-full rounded-4xl flex flex-col gap-[2em] xl:gap-[1.5em]">
@@ -62,10 +84,10 @@ const FooterSection = () => {
           Ecosystem
         </h1>
         <div className="flex flex-col gap-[.4em] md:gap-[.7em]">
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light">Instagram</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light">Twitter</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light">Linkedin</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light">Youtube</h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Instagram</h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Twitter</h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Linkedin</h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Youtube</h2>
         </div>
       </div>
     </footer>

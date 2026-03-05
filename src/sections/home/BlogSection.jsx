@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import BlogCard from "../../components/BlogCard";
+import FlipLink from "../../components/ui/FlipLink";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([
     {
       img: "../src/assets/images/blogImg/blockchain.jpg",
-      title:
-        "Short Guide on the Potential of Blockchain for Businesses",
+      title: "Short Guide on the Potential of Blockchain for Businesses",
       tags: ["Blockchain", "Business Technology"],
     },
     {
@@ -16,11 +17,13 @@ const BlogSection = () => {
     },
     {
       img: "../src/assets/images/blogImg/customApp.jpg",
-      title:
-        "Why Every Business Needs Custom Application Development in 2025?",
+      title: "Why Every Business Needs Custom Application Development in 2025?",
       tags: ["Custom Software", "App Development"],
     },
   ]);
+
+  const flipRef = useRef(null)
+  
   return (
     <section className="px-[1.5rem] md:px-[4rem] py-[4rem] xl:py-[8rem] flex flex-col gap-[5rem]">
       <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-[1.6em] xl:gap-[2em]">
@@ -32,10 +35,18 @@ const BlogSection = () => {
           Expert articles on digital marketing trends, campaign strategies, and
           industry best practices.
         </p>
-        <div className="w-fit h-fit px-[1.4em] py-[.3em] flex items-center gap-[.5em] border-2 rounded-full">
-          <h1 className="text-[1.4em]">View All</h1>
-          <i className="ri-arrow-right-up-line text-[1.8em]"></i>
-        </div>
+        <Link
+          to={"/contact"}
+          onMouseEnter={() => flipRef.current.play()}
+          onMouseLeave={() => flipRef.current.reverse()}
+          className="w-fit h-fit px-[1em] py-[.5em] flex items-center gap-[.5em] border-2 rounded-full text-[1.4em]"
+        >
+          <FlipLink
+            ref={flipRef}
+            text={"View All"}
+            icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+          />
+        </Link>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-[4em] xl:gap-[2em]">
         {blogData.map((blog, index) => (

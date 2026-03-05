@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import FlipLink from "./ui/FlipLink";
 
 const ServiceCard = ({ service }) => {
+  const flipRef = useRef(null);
   return (
     <div
       className="sticky top-30 w-full h-[36em] px-[1.8em] md:px-[3em] py-[1.9em] md:py-[2em] xl:pb-[4em] flex flex-col xl:justify-between gap-[1.5em] xl:gap-[2em] rounded-4xl overflow-hidden"
@@ -31,15 +34,24 @@ const ServiceCard = ({ service }) => {
           {service.description}
         </p>
       </div>
-      <div
-        className="absolute top-2 right-2 px-[.9em] xl:px-[1.5em] py-[.5em] xl:py-[1em] rounded-full"
+      <Link
+        to={"/services"}
+        onMouseEnter={() => flipRef.current.play()}
+        onMouseLeave={() => flipRef.current.reverse()}
+        className="z-100 absolute top-2 right-2 px-[.9em] xl:px-[1.5em] py-[.5em] xl:py-[1.5em] rounded-full"
         style={{ backgroundColor: service.buttonColor || "#000000" }}
       >
-        <i
-          className="ri-arrow-right-up-line text-[1.8em]"
-          style={{ color: service.arrowColor || "#FFFFFF" }}
-        ></i>
-      </div>
+        <FlipLink
+          ref={flipRef}
+          text={""}
+          icon={
+            <i
+              className="ri-arrow-right-up-line text-[1.8em]"
+              style={{ color: service.arrowColor || "#FFFFFF" }}
+            ></i>
+          }
+        />
+      </Link>
       <picture className="absolute z-98 -bottom-50 sm:-bottom-85 md:-bottom-100 left-0 lg:left-auto lg:-right-70 lg:-bottom-50 scale-85 lg:scale-60">
         <source media="(min-width: 1024px)" srcSet={service.largeImg} />
         <img src={service.smallImg} alt="bubble image" />

@@ -8,20 +8,21 @@ const FlipLink = forwardRef(({ text, icon }, ref) => {
   const iconBottomRef = useRef(null);
   const tl = useRef(null);
 
-  const letters = text.split("");
+  const letters = (text || "").split("");
 
   useEffect(() => {
-    // Initial state
-    gsap.set(bottomRef.current, { yPercent: 110 });
-    if (iconBottomRef.current) {
+    const topTargets = (topRef.current || []).filter(Boolean);
+    const bottomTargets = (bottomRef.current || []).filter(Boolean);
+
+    if (bottomTargets.length) gsap.set(bottomTargets, { yPercent: 110 });
+    if (iconBottomRef.current)
       gsap.set(iconBottomRef.current, { yPercent: 100 });
-    }
 
     tl.current = gsap.timeline({ paused: true });
 
-    tl.current
-      .to(
-        topRef.current,
+    if (topTargets.length) {
+      tl.current.to(
+        topTargets,
         {
           yPercent: -130,
           stagger: 0.03,
@@ -29,9 +30,12 @@ const FlipLink = forwardRef(({ text, icon }, ref) => {
           ease: "power2.out",
         },
         0,
-      )
-      .to(
-        bottomRef.current,
+      );
+    }
+
+    if (bottomTargets.length) {
+      tl.current.to(
+        bottomTargets,
         {
           yPercent: 0,
           stagger: 0.03,
@@ -40,13 +44,19 @@ const FlipLink = forwardRef(({ text, icon }, ref) => {
         },
         0,
       );
+    }
 
     if (iconTopRef.current && iconBottomRef.current) {
       tl.current
         .to(iconTopRef.current, { yPercent: -130, duration: 0.3 }, 0.15)
         .to(iconBottomRef.current, { yPercent: 0, duration: 0.3 }, 0.15);
     }
-  }, []);
+
+    return () => {
+      tl.current?.kill();
+      tl.current = null;
+    };
+  }, [text, icon]);
 
   // Expose controls
   useImperativeHandle(ref, () => ({
@@ -70,7 +80,10 @@ const FlipLink = forwardRef(({ text, icon }, ref) => {
         ))}
 
         {icon && (
-          <span ref={iconTopRef} className="inline-block ml-[0.2em]">
+          <span
+            ref={iconTopRef}
+            className={`inline-block${letters.length ? " ml-[0.2em]" : ""}`}
+          >
             {icon}
           </span>
         )}
@@ -90,7 +103,10 @@ const FlipLink = forwardRef(({ text, icon }, ref) => {
         ))}
 
         {icon && (
-          <span ref={iconBottomRef} className="inline-block ml-[0.2em]">
+          <span
+            ref={iconBottomRef}
+            className={`inline-block${letters.length ? " ml-[0.2em]" : ""}`}
+          >
             {icon}
           </span>
         )}

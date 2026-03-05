@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import { Link } from "react-router-dom";
+import FlipLink from "../../components/ui/FlipLink";
 
 const PortfolioShowcaseSection = () => {
   const [ProjectCardDetails, setProjectCardDetails] = useState([
@@ -48,6 +49,8 @@ const PortfolioShowcaseSection = () => {
     },
   ]);
 
+  const flipRef = useRef(null);
+
   return (
     <div className="px-[1.5rem] md:px-[4rem] py-[2rem] flex flex-col xl:flex-row xl:justify-between gap-[5em] xl:gap-[10em] text-[clamp(10px,3.5vw,17px)] xl:text-[clamp(10px,1.1vw,40px)]">
       <div className="xl:sticky xl:top-30 xl:h-screen flex flex-col gap-[2.5em]">
@@ -60,9 +63,17 @@ const PortfolioShowcaseSection = () => {
             designs
           </p>
         </div>
-        <Link to={"/work"} className="w-fit px-[1.5em] py-[.2em] flex items-center gap-[.5em] border-2 rounded-full">
-          <h1 className="text-[1.4em]">View All Works</h1>
-          <i className="ri-arrow-right-up-line text-[2em]"></i>
+        <Link
+          to={"/work"}
+          onMouseEnter={() => flipRef.current.play()}
+          onMouseLeave={() => flipRef.current.reverse()}
+          className="w-fit px-[1em] py-[.5em] flex items-center gap-[.5em] border-2 rounded-full text-[1.4em]"
+        >
+          <FlipLink
+            ref={flipRef}
+            text={"View All Works"}
+            icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+          />
         </Link>
       </div>
       <div className="flex flex-col gap-[4em]">
