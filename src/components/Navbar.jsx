@@ -1,11 +1,23 @@
 import { Link } from "react-router-dom";
 import "../style/font.css";
 import FlipLink from "./ui/FlipLink";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 const Navbar = () => {
   const flipRef = useRef();
+  const fadeinRef = useRef();
+
+  useEffect(()=>{
+    gsap.from(fadeinRef.current,{
+      opacity: 0,
+      duration: 1.7,
+      delay: 2,
+      ease: "power3.out",
+    })
+  },[])
+  
   return (
-    <div className="sticky top-0 z-999 px-[2rem] md:px-[3rem] lg:px-[3.8rem] py-[1.5rem] md:py-[2rem] lg:py-[2.2rem] flex justify-between items-center text-[clamp(.5em,3vw,1em)]">
+    <div ref={fadeinRef} className="sticky top-0 z-999 px-[2rem] md:px-[3rem] lg:px-[3.8rem] py-[1.5rem] md:py-[2rem] lg:py-[2.2rem] flex justify-between items-center text-[clamp(.5em,3vw,1em)]">
       <Link to={"/"} className="w-[12em] md:w-[14em] h-full">
         <img src="../src/assets/images/StreamCoreLogo.png" alt="" />
         {/* <h1 className="text-[1.5em] md:text-[2em] font-[monument] font-bold tracking-widest">

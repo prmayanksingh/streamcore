@@ -2,14 +2,35 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const BrandIntroSection = () => {
-  const heartRef = useRef();
-  const astroRef = useRef();
-  const cubeRef = useRef();
+  const fadeinRef = useRef([]);
   const techRef = useRef();
+  const heading1Ref = useRef();
+  const heading2Ref = useRef();
 
   useEffect(() => {
+    const tl = gsap.timeline();
+
+    gsap.from(heading1Ref.current, {
+      y: 140,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      delay: 1,
+    });
+    tl.from(heading2Ref.current, {
+      y: 200,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      delay: 1,
+    }).from(fadeinRef.current, {
+      opacity: 0,
+      duration: 1.7,
+      ease: "power3.out",
+    });
+
     // Heart Scale animation
-    gsap.to(heartRef.current, {
+    gsap.to(fadeinRef.current[0], {
       scale: 1.1,
       duration: 1.5,
       repeat: -1,
@@ -18,7 +39,7 @@ const BrandIntroSection = () => {
     });
 
     // Astro up & down
-    gsap.to(astroRef.current, {
+    gsap.to(fadeinRef.current[1], {
       y: -20,
       duration: 1.4,
       repeat: -1,
@@ -27,7 +48,7 @@ const BrandIntroSection = () => {
     });
 
     // Cube rotate
-    gsap.to(cubeRef.current, {
+    gsap.to(fadeinRef.current[2], {
       rotate: 360,
       duration: 4,
       repeat: -1,
@@ -48,37 +69,40 @@ const BrandIntroSection = () => {
   return (
     <div className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[2em] lg:gap-[7em] lg:px-[3em]">
       <div className="z-100 h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
-        <div className="flex flex-col md:flex-row items-center">
-          <h1 className="text-[5em] md:text-[5em] font-semibold">Design ,</h1>{" "}
-          <div className="flex items-center h-[4em] md:h-[4.7em] w-[25em] sm:w-[39em] md:w-[14em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
+        <div
+          ref={heading1Ref}
+          className="flex flex-col md:flex-row items-center"
+        >
+          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">Design ,</h1>{" "}
+          <div className="flex items-center h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
             <div ref={techRef} className="flex items-center gap-[1em]">
               {/* first set */}
               <div className="flex items-center gap-[1em]">
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>{" "}
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>{" "}
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[1.5em]"></i>
@@ -117,15 +141,21 @@ const BrandIntroSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-[.8em] leading-[4.5em]">
-          <h1 className="text-[5em] md:text-[5em] font-semibold">
+        <div
+          ref={heading2Ref}
+          className="flex flex-col sm:flex-row gap-[.8em] leading-[4.5em]"
+        >
+          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">
             <i className="ri-shining-fill text-[.8em] hidden md:inline"></i> and
             some
           </h1>
-          <h1 className="text-[5em] md:text-[5em] font-semibold">magic</h1>
+          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">magic</h1>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row-reverse items-center gap-[8em] lg:gap-[3em]">
+      <div
+        ref={(el) => (fadeinRef.current[3] = el)}
+        className="flex flex-col lg:flex-row-reverse items-center gap-[8em] lg:gap-[3em]"
+      >
         <div className="relative h-[15em] sm:h-[18em] md:h-[25em] lg:h-[8em] w-[25em] sm:w-[35em] md:w-[40em] lg:w-[13em] bg-gray-500 rounded-2xl overflow-hidden">
           <video
             autoPlay
@@ -171,20 +201,20 @@ const BrandIntroSection = () => {
         </div>
       </div>
       <img
-        ref={heartRef}
-        className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[13em] right-[72%] lg:right-[73%] xl:right-[70%] top-[7%] lg:top-[0%] xl:top-[-5%]"
+        ref={(el) => (fadeinRef.current[0] = el)}
+        className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[14em] right-[72%] lg:right-[73%] xl:right-[70%] top-[10%] lg:top-[0%] xl:top-[-5%]"
         src="../src/assets/images/brandIntro/heart.webp"
         alt="Heart Image"
       />
       <img
-        ref={astroRef}
-        className="hidden md:inline absolute z-101 h-[9em] lg:h-[8em] xl:h-[10em] left-[73%] xl:left-[68%] top-[4%] lg:top-[-7%]"
+        ref={(el) => (fadeinRef.current[1] = el)}
+        className="hidden md:inline absolute z-101 h-[9em] lg:h-[8em] xl:h-[11em] left-[73%] xl:left-[70%] top-[2%] lg:top-[-7%]"
         src="../src/assets/images/brandIntro/astroHelmet.webp"
         alt="AstroHelmet Image"
       />
       <img
-        ref={cubeRef}
-        className="hidden md:inline absolute z-101 h-[7em] right-[45%] top-[22%] lg:top-[39%]"
+        ref={(el) => (fadeinRef.current[2] = el)}
+        className="hidden md:inline absolute z-101 h-[8em] right-[45%] top-[22%] lg:top-[42%]"
         src="../src/assets/images/brandIntro/cube.webp"
         alt="cube Image"
       />
