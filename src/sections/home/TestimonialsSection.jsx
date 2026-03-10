@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import TestimonialCard from "../../components/TestimonialCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 
 const TestimonialsSection = () => {
   const [testimonials, setTestimonials] = useState([
@@ -81,6 +85,21 @@ const TestimonialsSection = () => {
         "Set-up and implementation was very easy. Communication with the team is excellent. We broke even on our investment very quickly!",
     },
   ]);
+
+  const clientRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.from(clientRef.current,{
+      y:40,
+      opacity:0,
+      scrollTrigger:{
+        trigger: clientRef.current,
+        start: "top 70%",
+        toggleActions: "play none none reset"
+      }
+    })
+  }, [])
+
   return (
     <div className="px-[1.5em] md:px-[4rem] py-[2em] xl:py-[3em] pb-[4em] xl:pb-[7em] xl:pr-0 flex flex-col xl:flex-row gap-[4em]">
       <div className="w-full xl:w-[40%] flex flex-col gap-[1.5em] xl:gap-[2em]">
@@ -94,7 +113,7 @@ const TestimonialsSection = () => {
         </p>
       </div>
       <div className="w-full xl:w-[60%] flex flex-col gap-[3em] md:gap-[2em]">
-        <div className="relative pb-[.5em] flex gap-[1.7em] overflow-x-auto custom-scroll">
+        <div ref={clientRef} className="relative pb-[.5em] flex gap-[1.7em] overflow-x-auto custom-scroll">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}
