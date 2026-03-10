@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import Approachbox from "../../components/Approachbox";
 import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ApproachSection = () => {
   const [data, setData] = useState([
@@ -39,6 +43,37 @@ const ApproachSection = () => {
 
   const flipRef = useRef(null);
 
+  useLayoutEffect(() => {
+    const boxes = gsap.utils.toArray(".approach-box");
+    const lines = gsap.utils.toArray(".approach-line");
+
+    boxes.forEach((box) => {
+      gsap.from(box, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: box,
+          start: "top 70%",
+          end: "top 55%",
+          scrub: true,
+        },
+      });
+    });
+
+    lines.forEach((line) => {
+      gsap.from(line, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: line,
+          start: "top 75%",
+          end: "top 55%",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="px-[1.5rem] md:px-[4rem] py-[3rem]">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
@@ -68,8 +103,10 @@ const ApproachSection = () => {
       <div className="h-[.1em] w-full mt-[4em] xl:mt-[5em] bg-white"></div>
       {data.map((item, index) => (
         <React.Fragment key={index}>
-          <Approachbox item={item} />
-          <div className="h-[.1em] w-full  bg-white"></div>
+          <div className="approach-box">
+            <Approachbox item={item} />
+          </div>
+          <div className="approach-line h-[.1em] w-full  bg-white"></div>
         </React.Fragment>
       ))}
     </div>
