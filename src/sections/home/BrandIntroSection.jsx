@@ -109,31 +109,31 @@ const BrandIntroSection = () => {
               </div>
               {/*  second set */}
               <div className="flex items-center gap-[1em]">
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>{" "}
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>{" "}
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[2em]"></i>
-                <h1 className="text-[4.5em] md:text-[5em] font-semibold">
+                <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
                 <i className="ri-shining-fill text-[1.5em]"></i>
