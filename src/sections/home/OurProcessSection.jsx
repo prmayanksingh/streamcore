@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import ProcessSteps from "../../components/ProcessSteps";
 import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 
 const OurProcessSection = () => {
   const [data, setData] = useState([
@@ -10,32 +14,63 @@ const OurProcessSection = () => {
       tag1: "Research",
       tag2: "Audience",
       step: "Step 01",
-      img: "../src/assets/images/ourProcess/heart.webp"
+      img: "../src/assets/images/ourProcess/heart.webp",
     },
     {
       title: "Strategy",
       tag1: "Planning",
       tag2: "Content",
       step: "Step 02",
-      img: "../src/assets/images/ourProcess/hexa.webp"
+      img: "../src/assets/images/ourProcess/hexa.webp",
     },
     {
       title: "Execution",
       tag1: "Development",
       tag2: "Testing",
       step: "Step 03",
-      img: "../src/assets/images/ourProcess/bubble.webp"
+      img: "../src/assets/images/ourProcess/bubble.webp",
     },
     {
       title: "Launch & Growth",
       tag1: "Development",
       tag2: "Support",
       step: "Step 04",
-      img: "../src/assets/images/ourProcess/spiral.webp"
+      img: "../src/assets/images/ourProcess/spiral.webp",
     },
   ]);
 
   const flipRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const steps = gsap.utils.toArray(".steps");
+    const lines = gsap.utils.toArray(".line");
+
+    steps.forEach((step) => {
+      gsap.from(step, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: step,
+          start: "top 70%",
+          end: "top 55%",
+          scrub: true,
+        },
+      });
+    });
+
+    lines.forEach((line) => {
+      gsap.from(line, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: line,
+          start: "top 75%",
+          end: "top 55%",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
 
   return (
     <div className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden">
@@ -59,8 +94,10 @@ const OurProcessSection = () => {
       <div className="h-[.1em] w-full mt-[4em] bg-white"></div>
       {data.map((item, index) => (
         <React.Fragment key={index}>
-          <ProcessSteps item={item} />
-          <div className="h-[.1em] w-full bg-white"></div>
+          <div className="steps">
+            <ProcessSteps item={item} />
+          </div>
+          <div className="line h-[.1em] w-full bg-white"></div>
         </React.Fragment>
       ))}
     </div>
