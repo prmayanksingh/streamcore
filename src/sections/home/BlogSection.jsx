@@ -68,8 +68,8 @@ const BlogSection = () => {
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-[4em] xl:gap-[2em]">
         {blogData.map((blog, index) => (
-          <div className="blog-card">
-            <BlogCard key={index} blog={blog} />
+          <div key={index} className="blog-card">
+            <BlogCard blog={blog} />
           </div>
         ))}
       </div>
