@@ -1,14 +1,49 @@
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const StatsSection = () => {
   const flipRef1 = useRef(null);
   const flipRef2 = useRef(null);
   const flipRef3 = useRef(null);
+  const box1Ref = useRef(null);
+  const box2Ref = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.from(box1Ref.current,{
+      y:20,
+      scale: 1.3,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger:{
+        trigger:box1Ref.current,
+        start: "top 80%",
+        toggleActions: "play none none reset"
+      }
+    })
+
+    gsap.from(box2Ref.current,{
+      y:20,
+      scale: 1.2,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger:{
+        trigger:box2Ref.current,
+        start: "top 80%",
+        toggleActions: "play none none reset"
+      }
+    })
+  }, [])
+  
+  
+  
   return (
-    <div className="px-[1.8em] md:px-[4em] xl:px-[4.3em] py-[8em] flex flex-col gap-[2.5em] xl:gap-[1.9em]">
-      <div className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em] text-black">
+    <div className="px-[1.8em] md:px-[4em] xl:px-[4.3em] py-[8em] flex flex-col gap-[2.5em] xl:gap-[1.9em] overflow-hidden">
+      <div ref={box1Ref} className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em] text-black">
         <div className="relative h-[34em] md:h-[28em] xl:h-[27em] xl:w-[37%] px-[2em] md:px-[3em] xl:px-[1em] py-[.7em] md:py-[1.3em] md:pb-[2em] flex flex-col md:justify-between md:items-end gap-[2em] bg-[#FFFF33] rounded-3xl overflow-hidden">
           <div className="z-99 flex flex-col gap-[.4em]">
             <h1 className="text-[4.3em] xl:text-[5em] font-semibold">90+</h1>
@@ -57,7 +92,7 @@ const StatsSection = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em]">
+      <div ref={box2Ref} className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em]">
         <div className="relative z-97 h-[34em] md:h-[28em] xl:h-[27em] xl:w-[63%] px-[2em] md:px-[2.5em] md:pt-[.7em] md:pb-[2.5em] bg-[#1C1C1C] rounded-3xl flex flex-col md:justify-between gap-[2em] overflow-hidden">
           <div className="z-99 flex flex-col gap-[.2em]">
             <h1 className="text-[4.3em] xl:text-[5.5em] font-semibold">5+</h1>
