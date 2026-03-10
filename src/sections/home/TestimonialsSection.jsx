@@ -90,11 +90,11 @@ const TestimonialsSection = () => {
 
   useLayoutEffect(() => {
     gsap.from(clientRef.current,{
-      y:40,
+      y:50,
       opacity:0,
       scrollTrigger:{
         trigger: clientRef.current,
-        start: "top 70%",
+        start: "top 90%",
         toggleActions: "play none none reset"
       }
     })

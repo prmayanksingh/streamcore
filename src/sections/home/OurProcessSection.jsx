@@ -51,8 +51,8 @@ const OurProcessSection = () => {
         opacity: 0,
         scrollTrigger: {
           trigger: step,
-          start: "top 70%",
-          end: "top 55%",
+          start: "top 90%",
+          end: "top 70%",
           scrub: true,
         },
       });
@@ -64,8 +64,8 @@ const OurProcessSection = () => {
         opacity: 0,
         scrollTrigger: {
           trigger: line,
-          start: "top 75%",
-          end: "top 55%",
+          start: "top 95%",
+          end: "top 70%",
           scrub: true,
         },
       });

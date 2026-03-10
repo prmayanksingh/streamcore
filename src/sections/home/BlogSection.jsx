@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import BlogCard from "../../components/BlogCard";
 import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([
@@ -22,8 +26,22 @@ const BlogSection = () => {
     },
   ]);
 
-  const flipRef = useRef(null)
-  
+  const flipRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.from(".blog-card", {
+      y: 60,
+      opacity: 0,
+      duration: 0.4,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: ".blog-card",
+        start: "top 95%",
+        toggleActions: "play none none reset",
+      },
+    });
+  }, []);
+
   return (
     <section className="px-[1.5rem] md:px-[4rem] py-[4rem] xl:py-[8rem] flex flex-col gap-[5rem]">
       <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-[1.6em] xl:gap-[2em]">
@@ -50,7 +68,9 @@ const BlogSection = () => {
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-[4em] xl:gap-[2em]">
         {blogData.map((blog, index) => (
-          <BlogCard key={index} blog={blog} />
+          <div className="blog-card">
+            <BlogCard key={index} blog={blog} />
+          </div>
         ))}
       </div>
     </section>
