@@ -1,6 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "./StaggeredMenu.css";
+import { Link } from "react-router-dom";
 
 export const StaggeredMenu = ({
   position = "right",
@@ -19,6 +20,7 @@ export const StaggeredMenu = ({
   closeOnClickAway = true,
   onMenuOpen,
   onMenuClose,
+  ref
 }) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -387,6 +389,7 @@ export const StaggeredMenu = ({
 
   return (
     <div
+     ref={ref}
       className={
         (className ? className + " " : "") +
         "staggered-menu-wrapper" +
@@ -412,11 +415,12 @@ export const StaggeredMenu = ({
           ));
         })()}
       </div>
+
       <header
         className="staggered-menu-header"
         aria-label="Main navigation header"
       >
-        <div className="sm-logo" aria-label="Logo">
+        <Link to={"/"} className="sm-logo" aria-label="Logo">
           <img
             src={logoUrl || ""}
             className="sm-logo-img"
@@ -424,10 +428,11 @@ export const StaggeredMenu = ({
             width={110}
             height={24}
           />
-        </div>
+        </Link>
+
         <button
           ref={toggleBtnRef}
-          className="sm-toggle"
+          className="sm-toggle rounded-full"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="staggered-menu-panel"

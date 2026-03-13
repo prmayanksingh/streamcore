@@ -32,7 +32,7 @@ const BrandIntroSection = () => {
     // Heart Scale animation
     gsap.to(fadeinRef.current[0], {
       scale: 1.1,
-      duration: 1.5,
+      duration: 1.8,
       repeat: -1,
       yoyo: true,
       ease: "power1.inOut",
@@ -41,7 +41,7 @@ const BrandIntroSection = () => {
     // Astro up & down
     gsap.to(fadeinRef.current[1], {
       y: -20,
-      duration: 1.4,
+      duration: 1.9,
       repeat: -1,
       yoyo: true,
       ease: "power1.inOut",
@@ -50,7 +50,7 @@ const BrandIntroSection = () => {
     // Cube rotate
     gsap.to(fadeinRef.current[2], {
       rotate: 360,
-      duration: 4,
+      duration: 6,
       repeat: -1,
       ease: "linear",
     });
@@ -60,7 +60,7 @@ const BrandIntroSection = () => {
     const firstSetWidth = tech.children[0].offsetWidth;
     gsap.to(tech, {
       x: -firstSetWidth,
-      duration: 10,
+      duration: 16,
       repeat: -1,
       ease: "linear",
     });
@@ -73,9 +73,9 @@ const BrandIntroSection = () => {
           ref={heading1Ref}
           className="flex flex-col md:flex-row items-center"
         >
-          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">Design ,</h1>{" "}
+          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">Design ,</h1>{" "}
           <div className="flex items-center h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
-            <div ref={techRef} className="flex items-center gap-[1em]">
+            <div ref={techRef} className="flex items-center justify-end">
               {/* first set */}
               <div className="flex items-center gap-[1em]">
                 <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
@@ -105,7 +105,7 @@ const BrandIntroSection = () => {
                 <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
-                <i className="ri-shining-fill text-[1.5em]"></i>
+                <i className="ri-shining-fill text-[2em]"></i>
               </div>
               {/*  second set */}
               <div className="flex items-center gap-[1em]">
@@ -136,20 +136,20 @@ const BrandIntroSection = () => {
                 <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
                   tech
                 </h1>{" "}
-                <i className="ri-shining-fill text-[1.5em]"></i>
+                <i className="ri-shining-fill text-[2em]"></i>
               </div>
             </div>
           </div>
         </div>
         <div
           ref={heading2Ref}
-          className="flex flex-col sm:flex-row gap-[.8em] leading-[4.5em]"
+          className="flex flex-col sm:flex-row gap-[.8em] leading-[4em]"
         >
-          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">
+          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">
             <i className="ri-shining-fill text-[.8em] hidden md:inline"></i> and
             some
           </h1>
-          <h1 className="text-[5em] md:text-[5em] xl:text-[6.5em] font-semibold">magic</h1>
+          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">magic</h1>
         </div>
       </div>
       <div
@@ -202,19 +202,19 @@ const BrandIntroSection = () => {
       </div>
       <img
         ref={(el) => (fadeinRef.current[0] = el)}
-        className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[14em] right-[72%] lg:right-[73%] xl:right-[70%] top-[10%] lg:top-[0%] xl:top-[-5%]"
+        className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[14em] right-[72%] lg:right-[73%] xl:right-[70%] top-[10%] md:top-[8%] lg:top-[0%] xl:top-[-5%]"
         src="../src/assets/images/brandIntro/heart.webp"
         alt="Heart Image"
       />
       <img
         ref={(el) => (fadeinRef.current[1] = el)}
-        className="hidden md:inline absolute z-101 h-[9em] lg:h-[8em] xl:h-[11em] left-[73%] xl:left-[70%] top-[2%] lg:top-[-7%]"
+        className="hidden md:inline absolute z-101 h-[9em] lg:h-[9em] xl:h-[11em] left-[73%] md:left-[74%] xl:left-[71%] top-[2%] md:top-[5%] lg:top-[-7%] xl:top-[-10%]"
         src="../src/assets/images/brandIntro/astroHelmet.webp"
         alt="AstroHelmet Image"
       />
       <img
         ref={(el) => (fadeinRef.current[2] = el)}
-        className="hidden md:inline absolute z-101 h-[8em] right-[45%] top-[22%] lg:top-[42%]"
+        className="hidden md:inline absolute z-101 h-[8em] right-[45%] top-[22%] lg:top-[40%] xl:top-[44%]"
         src="../src/assets/images/brandIntro/cube.webp"
         alt="cube Image"
       />

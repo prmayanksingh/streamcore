@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 100vh;  
   z-index: 9999;
   pointer-events: none;
   overflow: hidden;
@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2em;
+  padding: 2.5em 3em;
   background: transparent;
   pointer-events: none;
   z-index: 20;
@@ -56,12 +56,14 @@
   align-items: center;
   gap: 0.3rem;
   background: transparent;
-  border: none;
+  border: 3px solid #fff;
+  padding: 11px 18px;
   cursor: pointer;
   color: #e9e9ef;
   font-weight: 500;
   line-height: 1;
   overflow: visible;
+  font-size: 20px;
 }
 
 .sm-toggle:focus-visible {

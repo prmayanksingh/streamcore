@@ -38,7 +38,7 @@ const ServiceCard = ({ service }) => {
         to={"/services"}
         onMouseEnter={() => flipRef.current.play()}
         onMouseLeave={() => flipRef.current.reverse()}
-        className="z-100 absolute top-2 right-2 px-[.9em] xl:px-[1.5em] py-[.5em] xl:py-[1.5em] rounded-full"
+        className="z-100 absolute top-2 right-2 px-[1.2em] md:px-[1.5em] xl:px-[1.5em] py-[1.2em] md:py-[1.5em] xl:py-[1.5em] rounded-full"
         style={{ backgroundColor: service.buttonColor || "#000000" }}
       >
         <FlipLink
