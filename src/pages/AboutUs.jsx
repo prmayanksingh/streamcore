@@ -1,4 +1,3 @@
-import Temp from "../sections/Temp";
 import CultureImage1 from "../assets/images/aboutUs/cultureImage1.webp";
 import CultureImage2 from "../assets/images/aboutUs/cultureImage2.webp";
 import Navbar from "../components/Navbar";
@@ -12,18 +11,25 @@ import ApproachSection from "../sections/home/ApproachSection";
 import BlogSection from "../sections/home/BlogSection";
 import StartProjectSection from "../sections/home/StartProjectSection";
 import FooterSection from "../sections/home/FooterSection";
+import { useState } from "react";
 
 const AboutUs = () => {
+  const [marquee, setMarquee] = useState([
+    "eCommerce",
+    "Mobile Apps",
+    "Design",
+    "Development",
+  ]);
   return (
     <div>
       <Navbar />
       <div className="h-[5em] lg:h-[8em] xl:h-[9em] w-full"></div>
       <HeroSection />
       <IntroSection />
-      <HeroMarquee />
+      <HeroMarquee data={marquee} />
       <CultureSection img={CultureImage1} />
       <OurApproachSection />
-      <StatsSection />``
+      <StatsSection />
       <ApproachSection />
       <CultureSection img={CultureImage2} />
       <BlogSection />

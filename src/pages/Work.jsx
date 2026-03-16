@@ -6,8 +6,15 @@ import HeroMarquee from '../sections/home/HeroMarquee'
 import TestimonialsSection from '../sections/home/TestimonialsSection'
 import StartProjectSection from '../sections/home/StartProjectSection'
 import FooterSection from '../sections/home/FooterSection'
+import { useState } from "react";
 
 const Work = () => {
+  const [marquee, setMarquee] = useState([
+        "Clients Approve",
+        "Clients Approve",
+        "Clients Approve",
+        "Clients Approve",
+      ]);
   return (
     <div>
       <Navbar />
@@ -15,7 +22,7 @@ const Work = () => {
       <HeroSection />
       <FeaturedWorkSection />
       <WorkArchiveSection />
-      <HeroMarquee />
+      <HeroMarquee data={marquee} />
       <TestimonialsSection />
       <StartProjectSection />
       <FooterSection />

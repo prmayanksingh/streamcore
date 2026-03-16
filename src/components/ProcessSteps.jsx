@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const ProcessSteps = ({ item }) => {
   const iconeRef = useRef(null);
@@ -10,7 +11,7 @@ const ProcessSteps = ({ item }) => {
   const HandleEnter = (e) => {
     const rect = containerRef.current.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
-    
+
     if (window.innerWidth >= 1280) {
       gsap.to(iconeRef.current, {
         left: "0%",
@@ -25,9 +26,9 @@ const ProcessSteps = ({ item }) => {
         ease: "none",
       });
 
-      gsap.set(imgRef.current,{
-        x:mouseX-100  ,
-      })
+      gsap.set(imgRef.current, {
+        x: mouseX - 100,
+      });
 
       gsap.to(imgRef.current, {
         y: -80,
@@ -60,20 +61,20 @@ const ProcessSteps = ({ item }) => {
     }
   };
 
-  const HandleMove = (e) =>{
+  const HandleMove = (e) => {
     const rect = containerRef.current.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
-    
-    gsap.to(imgRef.current,{
-      x: mouseX-100,
+
+    gsap.to(imgRef.current, {
+      x: mouseX - 100,
       duration: 0.1,
-    })
-  }
-  
+    });
+  };
 
   return (
-    <div
-    ref={containerRef}
+    <Link
+    to={"/contact"}
+      ref={containerRef}
       onMouseEnter={HandleEnter}
       onMouseLeave={HandleLeave}
       onMouseMove={HandleMove}
@@ -100,8 +101,13 @@ const ProcessSteps = ({ item }) => {
           <p className="text-[.9em] text-gray-200">{item.step}</p>
         </div>
       </div>
-      <img ref={imgRef} className="absolute h-[14em] opacity-0" src={item.img} alt={item.title} />
-    </div>
+      <img
+        ref={imgRef}
+        className="absolute h-[14em] opacity-0"
+        src={item.img}
+        alt={item.title}
+      />
+    </Link>
   );
 };
 

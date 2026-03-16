@@ -4,7 +4,7 @@ import FlipLink from "../../components/ui/FlipLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const FooterSection = () => {
   const flipRef1 = useRef(null);
@@ -72,26 +72,26 @@ const FooterSection = () => {
         </Link>
       </div>
       <div className="box w-full rounded-4xl flex flex-col gap-[2em] xl:gap-[1.5em]">
-        <div className="h-[25%] px-[2em] md:px-[3.5em] xl:px-[3em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C]">
-          <i className="ri-shining-fill text-[1.5em]"></i>
-          <h1 className="text-[1.2em] md:text-[1.5em] xl:text-[1.3em]">
+        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C]">
+          <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
+          <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
             hr@streamcoretechnologies.com
           </h1>
         </div>
-        <div className="h-[25%] px-[2em] md:px-[3.5em] xl:px-[3em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C] p-[1em]">
-          <i className="ri-shining-fill text-[1.5em]"></i>{" "}
-          <h1 className="text-[1.3em] md:text-[1.5em] xl:text-[1.3em]">
+        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C] p-[1em]">
+          <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
+          <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
             +91 9415337435
           </h1>
         </div>
-        <div className="h-[50%] px-[2em] md:px-[3.5em] xl:px-[3em] py-[1.3em] flex flex-col justify-center gap-[.5em] rounded-2xl bg-[#1C1C1C] p-[1em]">
+        <div className="h-[50%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex flex-col justify-center gap-[.5em] rounded-2xl bg-[#1C1C1C] p-[1em]">
           <div className="flex items-center gap-[.7em]">
-            <i className="ri-shining-fill text-[1.5em]"></i>
-            <h1 className="text-[1.3em] md:text-[1.5em] xl:text-[1.3em]">
+            <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
+            <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
               India - G.Noida
             </h1>
           </div>
-          <p className="text-[.9em] md:text-[1em] xl:text-[.9em] text-[#808080]">
+          <p className="text-[.8em] md:text-[1em] xl:text-[.9em] text-[#808080]">
             NX One Byte Tower 3 A1518-1520 Techzone 4 Greater Noida west Gautam
             Buddh Nagar Nagar 201318
           </p>
@@ -102,10 +102,18 @@ const FooterSection = () => {
           Ecosystem
         </h1>
         <div className="flex flex-col gap-[.4em] md:gap-[.7em]">
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Instagram</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Twitter</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Linkedin</h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">Youtube</h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+            Instagram
+          </h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+            Twitter
+          </h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+            Linkedin
+          </h2>
+          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+            Youtube
+          </h2>
         </div>
       </div>
     </footer>

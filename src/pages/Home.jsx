@@ -13,8 +13,19 @@ import ClientsSection from "../sections/home/ClientsSection";
 import BlogSection from "../sections/home/BlogSection";
 import StartProjectSection from "../sections/home/StartProjectSection";
 import FooterSection from "../sections/home/FooterSection";
+import { useState } from "react";
 
 const Home = () => {
+  const [marquee, setMarquee] = useState({
+    firstMarquee: ["eCommerce", "Mobile Apps", "Design", "Development"],
+    secondMarquee: [
+      "Our Partners",
+      "Our Partners",
+      "Our Partners",
+      "Our Partners",
+    ],
+  });
+
   return (
     <div>
       <Navbar />
@@ -23,13 +34,13 @@ const Home = () => {
       <ShowcaseSection />
       <AboutSection />
       <StatsSection />
-      <HeroMarquee />
+      <HeroMarquee data={marquee.firstMarquee} />
       <PortfolioShowcaseSection />
       <ServicesSection />
       <ApproachSection />
       <OurProcessSection />
       <TestimonialsSection />
-      <HeroMarquee />
+      <HeroMarquee data={marquee.secondMarquee} />
       <ClientsSection />
       <BlogSection />
       <StartProjectSection />

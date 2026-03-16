@@ -10,7 +10,7 @@ const FormSection = () => {
   };
 
   return (
-    <section className="px-[1.5em] md:px-[4em] py-[5em] xl:flex xl:gap-[10em]">
+    <section className="px-[2em] md:px-[5em] py-[5em] xl:flex xl:gap-[10em]">
       <h5 className="w-[6.5em]"></h5>
       <form
         onSubmit={handleSubmit(loginHandler)}
