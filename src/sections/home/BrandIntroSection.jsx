@@ -59,7 +59,7 @@ const BrandIntroSection = () => {
     const tech = techRef.current;
     const firstSetWidth = tech.children[0].offsetWidth;
     gsap.to(tech, {
-      x: -firstSetWidth,
+      x: firstSetWidth + 16,
       duration: 16,
       repeat: -1,
       ease: "linear",
@@ -74,8 +74,8 @@ const BrandIntroSection = () => {
           className="flex flex-col md:flex-row items-center"
         >
           <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">Design ,</h1>{" "}
-          <div className="flex items-center h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
-            <div ref={techRef} className="flex items-center justify-end">
+          <div className="flex items-center justify-end h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
+            <div ref={techRef} className="flex items-center gap-[1em]">
               {/* first set */}
               <div className="flex items-center gap-[1em]">
                 <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
