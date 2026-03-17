@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
 import ServiceOverviewCard from "../../components/ServiceOverviewCard";
 import gsap from "gsap";
 
@@ -69,7 +69,6 @@ const ServicesOverviewSection = () => {
       ],
     },
   ]);
-
   const boxRef = useRef(null);
 
   useEffect(() => {
@@ -80,13 +79,46 @@ const ServicesOverviewSection = () => {
       ease: "power3.out",
     });
   }, []);
+
+  useLayoutEffect(() => {
+    const boxes = gsap.utils.toArray(".overview-box");
+    const lines = gsap.utils.toArray(".overview-line");
+
+    boxes.forEach((box) => {
+      gsap.from(box, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: box,
+          start: "top 90%",
+          end: "top 70%",
+          scrub: true,
+        },
+      });
+    });
+
+    lines.forEach((line) => {
+      gsap.from(line, {
+        y: 40,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: line,
+          start: "top 95%",
+          end: "top 70%",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
   return (
     <div ref={boxRef} className="px-[1.5em] md:px-[4em] py-[6em]">
       <div className="w-full h-[.1em] bg-white"></div>
       {data.map((job, index) => (
         <Fragment key={index}>
-          <ServiceOverviewCard job={job} />
-          <div className="w-full h-[.1em] bg-white"></div>
+          <div className="overview-box">
+            <ServiceOverviewCard job={job} />
+          </div>
+          <div className="overview-line w-full h-[.1em] bg-white"></div>
         </Fragment>
       ))}
     </div>

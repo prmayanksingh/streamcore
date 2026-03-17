@@ -106,7 +106,7 @@ const ApproachSection = () => {
           <div className="approach-box">
             <Approachbox item={item} />
           </div>
-          <div className="approach-line h-[.1em] w-full  bg-white"></div>
+          <div className="approach-line h-[.1em] w-full bg-white"></div>
         </React.Fragment>
       ))}
     </div>
