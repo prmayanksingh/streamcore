@@ -1,10 +1,12 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
+import FlipLink from "../../components/ui/FlipLink";
 
 const FormSection = () => {
   const { register, handleSubmit, reset } = useForm();
   const boxRef = useRef(null);
+  const flipRef = useRef(null);
 
   const loginHandler = (data) => {
     console.log(data);
@@ -20,7 +22,10 @@ const FormSection = () => {
     });
   }, []);
   return (
-    <section ref={boxRef} className="px-[2em] md:px-[5em] py-[5em] xl:flex xl:gap-[10em]">
+    <section
+      ref={boxRef}
+      className="px-[2em] md:px-[5em] py-[5em] xl:flex xl:gap-[10em]"
+    >
       <h5 className="w-[6.5em]"></h5>
       <form
         onSubmit={handleSubmit(loginHandler)}
@@ -79,8 +84,17 @@ const FormSection = () => {
           type="text"
           placeholder="A few words about your project*"
         />
-        <button className="w-fit bg-white text-black text-[1.5em] md:text-[1.7em] px-[.9em] md:px-[1.1em] py-[.3em] md:py-[.5em] rounded-full">
-          Submit <i className="ri-arrow-right-up-line"></i>
+        <button
+          type="submit"
+          onMouseEnter={() => flipRef.current.play()}
+          onMouseLeave={() => flipRef.current.reverse()}
+          className="w-fit bg-white text-black text-[1.5em] md:text-[1.7em] px-[.9em] md:px-[1.1em] py-[.3em] md:py-[.5em] rounded-full"
+        >
+          <FlipLink
+            ref={flipRef}
+            text={"Submit"}
+            icon={<i className="ri-arrow-right-up-line text-[1.3em]"></i>}
+          />
         </button>
       </form>
     </section>

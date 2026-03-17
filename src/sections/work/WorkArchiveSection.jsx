@@ -1,6 +1,8 @@
-import React, { Fragment, useLayoutEffect, useState } from "react";
+import React, { Fragment, useLayoutEffect, useRef, useState } from "react";
 import WorkArchiveItem from "../../components/WorkArchiveItem";
 import gsap from "gsap";
+import FlipLink from "../../components/ui/FlipLink";
+import { Link } from "react-router-dom";
 
 const WorkArchiveSection = () => {
   const [data, setdata] = useState([
@@ -35,6 +37,8 @@ const WorkArchiveSection = () => {
       roles: ["Service", "Responsive", "Web Design"],
     },
   ]);
+
+  const flipRef = useRef(null);
 
   useLayoutEffect(() => {
     const boxes = gsap.utils.toArray(".archive-box");
@@ -72,17 +76,24 @@ const WorkArchiveSection = () => {
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Portfolio archive
         </h1>
-        <div className="w-fit h-fit px-[1.4em] py-[.3em] flex items-center gap-[.5em] border-2 rounded-full">
-          <h1 className="text-[1.4em]">Clients Approve</h1>
-          <i className="ri-arrow-right-down-line text-[1.8em]"></i>
-        </div>
+        <Link
+          to={"/contact"}
+          onMouseEnter={() => flipRef.current.play()}
+          onMouseLeave={() => flipRef.current.reverse()}
+          className="w-fit h-fit px-[1em] py-[.5em] flex items-center gap-[.5em] border-2 rounded-full text-[1.4em]"
+        >
+          <FlipLink
+            ref={flipRef}
+            text={"Clients Approve"}
+            icon={<i className="ri-arrow-right-down-line text-[1.3em]"></i>}
+          />
+        </Link>
       </div>
       <div className="w-full h-[.1em] bg-white"></div>
       {data.map((job, index) => (
         <Fragment key={index}>
           <div className="archive-box">
-
-          <WorkArchiveItem job={job} />
+            <WorkArchiveItem job={job} />
           </div>
           <div className="archive-line w-full h-[.1em] bg-white"></div>
         </Fragment>
