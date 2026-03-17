@@ -1,5 +1,6 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import ServiceOverviewCard from "../../components/ServiceOverviewCard";
+import gsap from "gsap";
 
 const ServicesOverviewSection = () => {
   const [data, setdata] = useState([
@@ -68,8 +69,19 @@ const ServicesOverviewSection = () => {
       ],
     },
   ]);
+
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(boxRef.current, {
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.8,
+      ease: "power3.out",
+    });
+  }, []);
   return (
-    <div className="px-[1.5em] md:px-[4em] py-[6em]">
+    <div ref={boxRef} className="px-[1.5em] md:px-[4em] py-[6em]">
       <div className="w-full h-[.1em] bg-white"></div>
       {data.map((job, index) => (
         <Fragment key={index}>

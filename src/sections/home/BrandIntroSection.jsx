@@ -11,23 +11,23 @@ const BrandIntroSection = () => {
     const tl = gsap.timeline();
 
     gsap.from(heading1Ref.current, {
-      y: 140,
+      y: 100,
       opacity: 0,
       duration: 1.2,
       ease: "power3.out",
-      delay: 1,
+      delay: .3,
     });
     tl.from(heading2Ref.current, {
-      y: 200,
+      y: 150,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
-      delay: 1,
+      delay: .3,
     }).from(fadeinRef.current, {
       opacity: 0,
       duration: 1.7,
       ease: "power3.out",
-    });
+    },"-=.2");
 
     // Heart Scale animation
     gsap.to(fadeinRef.current[0], {
@@ -73,7 +73,9 @@ const BrandIntroSection = () => {
           ref={heading1Ref}
           className="flex flex-col md:flex-row items-center"
         >
-          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">Design ,</h1>{" "}
+          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">
+            Design ,
+          </h1>{" "}
           <div className="flex items-center justify-end h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
             <div ref={techRef} className="flex items-center gap-[1em]">
               {/* first set */}
@@ -149,7 +151,9 @@ const BrandIntroSection = () => {
             <i className="ri-shining-fill text-[.8em] hidden md:inline"></i> and
             some
           </h1>
-          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">magic</h1>
+          <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">
+            magic
+          </h1>
         </div>
       </div>
       <div

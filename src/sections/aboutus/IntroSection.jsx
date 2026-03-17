@@ -1,8 +1,19 @@
-import React from "react";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 const IntroSection = () => {
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(boxRef.current, {
+      opacity: 0,
+      duration: 1.2,
+      delay: .8,
+      ease: "power3.out",
+    });
+  }, []);
   return (
-    <div className="xl:w-full xl:h-[75em] px-[1.5em] md:px-[4em] py-[8em] pt-[9em] flex flex-col xl:flex-row gap-[3em] md:gap-[4em] xl:gap-[2em]">
+    <div ref={boxRef} className="xl:w-full xl:h-[75em] px-[1.5em] md:px-[4em] py-[8em] pt-[9em] flex flex-col xl:flex-row gap-[3em] md:gap-[4em] xl:gap-[2em]">
       <div className="xl:w-[50%] flex flex-col xl:flex-row-reverse xl:justify-between gap-[4em]">
         <div className="w-full xl:w-[90%] h-[30em] md:h-[38em] xl:h-full rounded-[2em] overflow-hidden">
           <img

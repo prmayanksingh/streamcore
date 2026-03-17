@@ -1,8 +1,19 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 
 const StatsSection = () => {
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(boxRef.current, {
+      opacity: 0,
+      duration: 1.2,
+      delay: .8,
+      ease: "power3.out",
+    });
+  }, []);
   return (
-    <section className="px-[1.5em] md:px-[4em] py-[4em] xl:pt-[8em]">
+    <section ref={boxRef} className="px-[1.5em] md:px-[4em] py-[4em] xl:pt-[8em]">
       <div className="flex flex-col xl:flex-row gap-[2em] xl:gap-[1.9em]">
         <div className="relative z-97 h-[34em] md:h-[28em] xl:h-[27em] xl:w-[63%] px-[2em] md:px-[2.5em] md:pt-[.7em] md:pb-[2.5em] bg-[#1C1C1C] rounded-3xl flex flex-col md:justify-between gap-[2em] overflow-hidden">
           <div className="z-99 flex flex-col gap-[.2em]">

@@ -1,16 +1,26 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 
 const FormSection = () => {
   const { register, handleSubmit, reset } = useForm();
+  const boxRef = useRef(null);
 
   const loginHandler = (data) => {
     console.log(data);
     reset();
   };
 
+  useEffect(() => {
+    gsap.from(boxRef.current, {
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.8,
+      ease: "power3.out",
+    });
+  }, []);
   return (
-    <section className="px-[2em] md:px-[5em] py-[5em] xl:flex xl:gap-[10em]">
+    <section ref={boxRef} className="px-[2em] md:px-[5em] py-[5em] xl:flex xl:gap-[10em]">
       <h5 className="w-[6.5em]"></h5>
       <form
         onSubmit={handleSubmit(loginHandler)}

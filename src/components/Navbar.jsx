@@ -10,7 +10,7 @@ const Navbar = () => {
     gsap.from(fadeinRef.current, {
       opacity: 0,
       duration: 1.7,
-      delay: 2,
+      delay: .8,
       ease: "power3.out",
     });
   }, []);

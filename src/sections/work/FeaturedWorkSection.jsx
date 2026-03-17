@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FeaturedWorkCard from "../../components/FeaturedWorkCard";
+import gsap from "gsap";
 
 const FeaturedWorkSection = () => {
   const [data, setData] = useState([
@@ -35,8 +36,22 @@ const FeaturedWorkSection = () => {
     },
   ]);
 
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(boxRef.current, {
+      opacity: 0,
+      duration: 1.2,
+      delay: .8,
+      ease: "power3.out",
+    });
+  }, []);
+
   return (
-    <div className="px-[1.5em] md:px-[4em] py-[7rem] flex flex-col gap-[2em]">
+    <div
+      ref={boxRef}
+      className="px-[1.5em] md:px-[4em] py-[7rem] flex flex-col gap-[2em]"
+    >
       {data.map((cardData, index) => (
         <FeaturedWorkCard key={index} cardData={cardData} />
       ))}
