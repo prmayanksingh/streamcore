@@ -88,7 +88,7 @@ const StatsSection = () => {
             <div className="z-102 h-[5em] w-[5em] -mx-[1em] rounded-full bg-amber-50 bg-cover flex items-center justify-center">
               <i className="ri-shining-fill text-[2em] text-blue-500"></i>
             </div>
-            <div className="z-103 h-[5em] w-[5em] rounded-full bg-amber-50 bg-[url('../src/')] bg-cover"
+            <div className="z-103 h-[5em] w-[5em] rounded-full bg-amber-50 bg-cover"
             style={{ backgroundImage: `url(${testimonialsWomenImg})` }}
             ></div>
           </div>

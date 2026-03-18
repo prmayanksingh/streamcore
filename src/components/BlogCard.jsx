@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import icon_eye from '../assets/images/blogImg/icon-eye.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ const BlogCard = ({ blog }) => {
         <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
           <img
             className="h-[4em]"
-            src="../src/assets/images/blogImg/icon-eye.svg"
+            src={icon_eye}
             alt=""
           />
         </div>

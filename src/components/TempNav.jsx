@@ -3,6 +3,7 @@ import "../style/font.css";
 import FlipLink from "./ui/FlipLink";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import StreamCoreLogo from '../assets/images/StreamCoreLogo.png'
 
 const TempNav = () => {
   const flipRef = useRef();
@@ -23,7 +24,7 @@ const TempNav = () => {
       className="fixed w-full z-999 px-[2rem] md:px-[3rem] lg:px-[3.8rem] py-[1.5rem] md:py-[2rem] lg:py-[2.2rem] flex justify-between items-center text-[clamp(.5em,3vw,1em)]"
     >
       <Link to={"/"} className="w-[12em] md:w-[14em] h-full">
-        <img src="../src/assets/images/StreamCoreLogo.png" alt="" />
+        <img src={StreamCoreLogo} alt="" />
         {/* <h1 className="text-[1.5em] md:text-[2em] font-[monument] font-bold tracking-widest">
           WHIZOID
         </h1>
