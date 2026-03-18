@@ -87,18 +87,94 @@ const TestimonialsSection = () => {
   ]);
 
   const clientRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollStartLeft = useRef(0);
+  const velocity = useRef(0);
+  const lastX = useRef(0);
+  const lastTime = useRef(0);
+  const momentumId = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.from(clientRef.current,{
-      y:50,
-      opacity:0,
-      scrollTrigger:{
+    if (!clientRef.current) return;
+
+    gsap.from(clientRef.current, {
+      y: 50,
+      opacity: 0,
+      scrollTrigger: {
         trigger: clientRef.current,
         start: "top 90%",
-        toggleActions: "play none none reset"
+        toggleActions: "play none none reset",
+      },
+    });
+  }, []);
+
+  const handleMouseDown = (e) => {
+    if (!clientRef.current) return;
+
+    if (momentumId.current) {
+      cancelAnimationFrame(momentumId.current);
+      momentumId.current = null;
+    }
+
+    isDragging.current = true;
+    startX.current = e.pageX - clientRef.current.offsetLeft;
+    scrollStartLeft.current = clientRef.current.scrollLeft;
+    lastX.current = e.pageX;
+    lastTime.current = performance.now();
+  };
+
+  const startMomentumScroll = () => {
+    if (!clientRef.current) return;
+
+    const decay = 0.95;
+    const minVelocity = 0.3;
+
+    const step = () => {
+      if (!clientRef.current) return;
+
+      if (Math.abs(velocity.current) < minVelocity) {
+        momentumId.current = null;
+        return;
       }
-    })
-  }, [])
+
+      clientRef.current.scrollLeft -= velocity.current;
+      velocity.current *= decay;
+      momentumId.current = requestAnimationFrame(step);
+    };
+
+    momentumId.current = requestAnimationFrame(step);
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging.current) {
+      isDragging.current = false;
+      startMomentumScroll();
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (isDragging.current) {
+      isDragging.current = false;
+      startMomentumScroll();
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current || !clientRef.current) return;
+
+    e.preventDefault();
+    const x = e.pageX - clientRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.2;
+    clientRef.current.scrollLeft = scrollStartLeft.current - walk;
+
+    const now = performance.now();
+    const deltaX = e.pageX - lastX.current;
+    const deltaTime = now - lastTime.current || 16;
+    velocity.current = deltaX / deltaTime * 20;
+    lastX.current = e.pageX;
+    lastTime.current = now;
+  };
 
   return (
     <div className="px-[1.5em] md:px-[4rem] py-[2em] xl:py-[3em] pb-[4em] xl:pb-[7em] xl:pr-0 flex flex-col xl:flex-row gap-[4em]">
@@ -113,7 +189,14 @@ const TestimonialsSection = () => {
         </p>
       </div>
       <div className="w-full xl:w-[60%] flex flex-col gap-[3em] md:gap-[2em]">
-        <div ref={clientRef} className="relative pb-[.5em] flex gap-[1.7em] overflow-x-auto custom-scroll">
+        <div
+          ref={clientRef}
+          className="relative pb-[.5em] flex gap-[1.7em] overflow-x-auto custom-scroll cursor-grab active:cursor-grabbing select-none"
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+        >
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}

@@ -20,7 +20,7 @@ export const StaggeredMenu = ({
   closeOnClickAway = true,
   onMenuOpen,
   onMenuClose,
-  ref
+  ref,
 }) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -389,7 +389,7 @@ export const StaggeredMenu = ({
 
   return (
     <div
-     ref={ref}
+      ref={ref}
       className={
         (className ? className + " " : "") +
         "staggered-menu-wrapper" +
@@ -423,7 +423,7 @@ export const StaggeredMenu = ({
         <Link to={"/"} className="sm-logo" aria-label="Logo">
           <img
             src={logoUrl || ""}
-            className="sm-logo-img"
+            className="sm-logo-img h-[2.5em] sm:h-[3em]"
             draggable={false}
             width={110}
             height={24}
@@ -432,7 +432,7 @@ export const StaggeredMenu = ({
 
         <button
           ref={toggleBtnRef}
-          className="sm-toggle rounded-full"
+          className="sm-toggle text-[1em] sm:text-[1.2em] px-[.8em] sm:px-[1em] py-[.5em] border-2 border-white rounded-full"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="staggered-menu-panel"
