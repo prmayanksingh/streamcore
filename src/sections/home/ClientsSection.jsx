@@ -11,7 +11,7 @@ import ElvnElvn from '../../assets/images/ClientsLogo/11_11.svg'
 import snuzzles from '../../assets/images/ClientsLogo/snuzzles.svg'
 import GABhilare from '../../assets/images/ClientsLogo/G.A.Bhilare.png'
 import Brihanmumbai from '../../assets/images/ClientsLogo/Brihanmumbai.png'
-import masoli from '../../assets/images/ClientsLogo/masoli.png'
+import masoli from '../../assets/images/ClientsLogo/Masoli.png'
 
 const ClientsSection = () => {
   const [images, setImages] = useState([
