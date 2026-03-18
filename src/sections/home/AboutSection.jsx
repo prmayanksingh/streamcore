@@ -5,7 +5,7 @@ import FlipLink from "../../components/ui/FlipLink";
 const AboutSection = () => {
   const flipRef = useRef();
   return (
-    <div className="px-[2em] md:px-[4em] lg:px-[4em] xl:px-[5em] flex flex-col lg:flex-row lg:justify-between gap-[2em] md:gap-[2em]">
+    <section className="px-[2em] md:px-[4em] lg:px-[4em] xl:px-[5em] flex flex-col lg:flex-row lg:justify-between gap-[2em] md:gap-[2em]">
       <div className="h-[20%] lg:h-full lg:w-[40%] flex flex-row items-center gap-[1em]">
         <i className="ri-shining-fill"></i>
         <h2 className="text-[1.4em] md:text-[1.6em] font-light">Who are we</h2>
@@ -31,7 +31,7 @@ const AboutSection = () => {
           />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

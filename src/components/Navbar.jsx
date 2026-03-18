@@ -44,8 +44,6 @@ const Navbar = () => {
       colors={["#B19EEF", "#5227FF"]}
       logoUrl={StreamCoreLogo}
       accentColor="#5227FF"
-      onMenuOpen={() => console.log("Menu opened")}
-      onMenuClose={() => console.log("Menu closed")}
     />
   );
 };

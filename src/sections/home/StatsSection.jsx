@@ -46,7 +46,7 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <div className="px-[1.8em] md:px-[4em] xl:px-[4.3em] py-[8em] flex flex-col gap-[2.5em] xl:gap-[1.9em] overflow-hidden">
+    <section className="px-[1.8em] md:px-[4em] xl:px-[4.3em] py-[8em] flex flex-col gap-[2.5em] xl:gap-[1.9em] overflow-hidden">
       <div
         ref={box1Ref}
         className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em] text-black"
@@ -170,7 +170,7 @@ const StatsSection = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

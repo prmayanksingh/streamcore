@@ -58,7 +58,7 @@ const PortfolioShowcaseSection = () => {
   const flipRef = useRef(null);
 
   return (
-    <div className="px-[1.5rem] md:px-[4rem] py-[2rem] flex flex-col xl:flex-row xl:justify-between gap-[5em] xl:gap-[10em] text-[clamp(10px,3.5vw,17px)] xl:text-[clamp(10px,1.1vw,40px)]">
+    <section className="px-[1.5rem] md:px-[4rem] py-[2rem] flex flex-col xl:flex-row xl:justify-between gap-[5em] xl:gap-[10em] text-[clamp(10px,3.5vw,17px)] xl:text-[clamp(10px,1.1vw,40px)]">
       <div className="xl:sticky xl:top-30 xl:h-screen flex flex-col gap-[2.5em]">
         <div className="flex flex-col gap-[1.4em]">
           <h1 className="text-[3.5em] md:text-[4.5em] leading-[1em]">
@@ -87,7 +87,7 @@ const PortfolioShowcaseSection = () => {
           <ProjectCard key={index} cardDetails={cardDetails} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

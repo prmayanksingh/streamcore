@@ -71,7 +71,7 @@ const WorkArchiveSection = () => {
     });
   }, []);
   return (
-    <div className="px-[1.5em] md:px-[4em] py-[3em] pb-[6em]">
+    <section className="px-[1.5em] md:px-[4em] py-[3em] pb-[6em]">
       <div className="pb-[4em] flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Portfolio archive
@@ -98,7 +98,7 @@ const WorkArchiveSection = () => {
           <div className="archive-line w-full h-[.1em] bg-white"></div>
         </Fragment>
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -54,14 +54,14 @@ const FeaturedWorkSection = () => {
   }, []);
 
   return (
-    <div
+    <section
       ref={boxRef}
       className="px-[1.5em] md:px-[4em] py-[7rem] flex flex-col gap-[2em]"
     >
       {data.map((cardData, index) => (
         <FeaturedWorkCard key={index} cardData={cardData} />
       ))}
-    </div>
+    </section>
   );
 };
 

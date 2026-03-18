@@ -12,6 +12,7 @@ const BrandIntroSection = () => {
   const techRef = useRef();
   const heading1Ref = useRef();
   const heading2Ref = useRef();
+  const curvTextRef = useRef();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -65,6 +66,14 @@ const BrandIntroSection = () => {
       ease: "linear",
     });
 
+    // Curve Text rotate
+    gsap.to(curvTextRef.current, {
+      rotate: 360,
+      duration: 25,
+      repeat: -1,
+      ease: "linear",
+    });
+
     // tech marquee animation
     const tech = techRef.current;
     const firstSetWidth = tech.children[0].offsetWidth;
@@ -77,7 +86,7 @@ const BrandIntroSection = () => {
   }, []);
 
   return (
-    <div className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[2em] lg:gap-[7em] lg:px-[3em]">
+    <section className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[2em] lg:gap-[7em] lg:px-[3em]">
       <div className="z-100 h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
         <div
           ref={heading1Ref}
@@ -187,6 +196,7 @@ const BrandIntroSection = () => {
         <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424]">
           <div className="relative h-[13em] lg:h-[8em] w-[13em] lg:w-[8em] flex items-center justify-center">
             <img
+            ref={curvTextRef}
               src={curvedTextImg}
               className="h-full w-full scale-[230%] bg-cover"
               alt="curved-text"
@@ -232,7 +242,7 @@ const BrandIntroSection = () => {
         src={cubeImg}
         alt="cube Image"
       />
-    </div>
+    </section>
   );
 };
 

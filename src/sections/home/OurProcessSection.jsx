@@ -91,7 +91,7 @@ const OurProcessSection = () => {
   }, []);
 
   return (
-    <div
+    <section
       ref={sectionRef}
       className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden"
     >
@@ -121,7 +121,7 @@ const OurProcessSection = () => {
           <div className="line h-[.1em] w-full bg-white"></div>
         </React.Fragment>
       ))}
-    </div>
+    </section>
   );
 };
 

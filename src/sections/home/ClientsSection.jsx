@@ -29,11 +29,11 @@ const ClientsSection = () => {
     { img: masoli },
   ]);
   return (
-    <div className="px-[1.5rem] md:px-[4rem] py-[2em] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[2em]">
+    <section className="px-[1.5rem] md:px-[4rem] py-[2em] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[2em]">
       {images.map((image, index) => (
         <ClientLogoCard key={index} img={image.img} />
       ))}
-    </div>
+    </section>
   );
 };
 

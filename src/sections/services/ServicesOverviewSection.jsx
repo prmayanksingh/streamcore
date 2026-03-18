@@ -111,7 +111,7 @@ const ServicesOverviewSection = () => {
     });
   }, []);
   return (
-    <div ref={boxRef} className="px-[1.5em] md:px-[4em] py-[6em]">
+    <section ref={boxRef} className="px-[1.5em] md:px-[4em] py-[6em]">
       <div className="w-full h-[.1em] bg-white"></div>
       {data.map((job, index) => (
         <Fragment key={index}>
@@ -121,7 +121,7 @@ const ServicesOverviewSection = () => {
           <div className="overview-line w-full h-[.1em] bg-white"></div>
         </Fragment>
       ))}
-    </div>
+    </section>
   );
 };
 

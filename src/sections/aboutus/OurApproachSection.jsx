@@ -77,7 +77,7 @@ const OurApproachSection = () => {
   }, []);
 
   return (
-    <div className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden">
+    <section className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Our Process <br />& Approach
@@ -104,7 +104,7 @@ const OurApproachSection = () => {
           <div className="line h-[.1em] w-full bg-white"></div>
         </React.Fragment>
       ))}
-    </div>
+    </section>
   );
 };
 
