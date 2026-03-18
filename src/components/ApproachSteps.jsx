@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const ApproachSteps = ({item}) => {
+const ApproachSteps = ({ item }) => {
   return (
     <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.88em]">
       <div className="w-full flex flex-col xl:flex-row xl:justify-between xl:gap-[3em] gap-[1.2em] md:gap-[1.6em]">
@@ -19,6 +19,6 @@ const ApproachSteps = ({item}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ApproachSteps
+export default ApproachSteps;
