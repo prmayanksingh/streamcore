@@ -2,6 +2,7 @@ import "../style/font.css";
 import { useEffect, useRef } from "react";
 import StaggeredMenu from "./ui/StaggeredMenu";
 import gsap from "gsap";
+import StreamCoreLogo from '../assets/images/StreamCoreLogo.png'
 
 const Navbar = () => {
   const fadeinRef = useRef();
@@ -41,7 +42,7 @@ const Navbar = () => {
       openMenuButtonColor="#000"
       changeMenuColorOnOpen={true}
       colors={["#B19EEF", "#5227FF"]}
-      logoUrl="../src/assets/images/StreamCoreLogo.png"
+      logoUrl={StreamCoreLogo}
       accentColor="#5227FF"
       onMenuOpen={() => console.log("Menu opened")}
       onMenuClose={() => console.log("Menu closed")}

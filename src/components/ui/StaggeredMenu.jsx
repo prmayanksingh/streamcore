@@ -11,7 +11,7 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = "../src/assets/svg/menu.svg",
+  logoUrl,
   menuButtonColor = "#fff",
   openMenuButtonColor = "#fff",
   accentColor = "#5227FF",
