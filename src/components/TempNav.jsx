@@ -3,7 +3,7 @@ import "../style/font.css";
 import FlipLink from "./ui/FlipLink";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import StreamCoreLogo from '../assets/images/StreamCoreLogo.PNG'
+import StreamCoreLogo from '../assets/images/StreamCoreLogo.png'
 
 const TempNav = () => {
   const flipRef = useRef();

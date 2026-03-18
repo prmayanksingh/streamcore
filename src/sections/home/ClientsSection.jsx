@@ -6,12 +6,12 @@ import exicom from '../../assets/images/ClientsLogo/exicom.svg'
 import bramhaRealty from '../../assets/images/ClientsLogo/bramha-realty.svg'
 import chargeup from '../../assets/images/ClientsLogo/chargeup.svg'
 import hp from '../../assets/images/ClientsLogo/hp.svg'
-import Ditra from '../../assets/images/ClientsLogo/Ditra.PNG'
+import Ditra from '../../assets/images/ClientsLogo/Ditra.png'
 import ElvnElvn from '../../assets/images/ClientsLogo/11_11.svg'
 import snuzzles from '../../assets/images/ClientsLogo/snuzzles.svg'
-import GABhilare from '../../assets/images/ClientsLogo/G.A.Bhilare.PNG'
-import Brihanmumbai from '../../assets/images/ClientsLogo/Brihanmumbai.PNG'
-import masoli from '../../assets/images/ClientsLogo/Masoli.PNG'
+import GABhilare from '../../assets/images/ClientsLogo/G.A.Bhilare.png'
+import Brihanmumbai from '../../assets/images/ClientsLogo/Brihanmumbai.png'
+import masoli from '../../assets/images/ClientsLogo/Masoli.png'
 
 const ClientsSection = () => {
   const [images, setImages] = useState([

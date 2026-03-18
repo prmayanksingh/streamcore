@@ -3,7 +3,7 @@ import gsap from "gsap";
 import heartImg from "../../assets/images/brandIntro/heart.webp";
 import astroHelmetImg from "../../assets/images/brandIntro/astroHelmet.webp";
 import cubeImg from "../../assets/images/brandIntro/cube.webp";
-import curvedTextImg from "../../assets/images/curved-text.PNG";
+import curvedTextImg from "../../assets/images/curved-text.png";
 import spiralImg from "../../assets/images/spiral.webp";
 import spiralVideo from '../../assets/spiralVideo.mp4'
 
