@@ -3,31 +3,34 @@ import { Link } from "react-router-dom";
 import FlipLink from "./ui/FlipLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import blurCube from '../assets/images/contact/blurCube.webp'
-import astroHelmet from '../assets/images/contact/astroHelmet.webp'
-import spring from '../assets/images/contact/spring.webp'
+import blurCube from "../assets/images/contact/blurCube.webp";
+import astroHelmet from "../assets/images/contact/astroHelmet.webp";
+import spring from "../assets/images/contact/spring.webp";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const StartProject = () => {
   const flipRef = useRef(null);
-  const boxRef = useRef(null)
+  const boxRef = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.from(boxRef.current,{
-      scale:1.05,
+    gsap.from(boxRef.current, {
+      scale: 1.05,
       borderRadius: "25%",
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: boxRef.current,
         start: "top 75%",
         end: "top 30%",
-        scrub: true
-      }
-    })
-  }, [])
-  
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
-    <div ref={boxRef} className="z-98 relative w-full h-[30em] md:h-[44em] px-[2em] md:px-[3em] rounded-4xl bg-white flex flex-col justify-center gap-[4em] overflow-hidden">
+    <div
+      ref={boxRef}
+      className="z-98 relative w-full h-[30em] md:h-[44em] px-[2em] md:px-[3em] rounded-4xl bg-white flex flex-col justify-center gap-[4em] overflow-hidden"
+    >
       <h1 className="z-100 text-[2.8em] md:text-[5em] xl:text-[6em] font-semibold leading-none text-black">
         <i className="ri-poker-hearts-fill text-[.9em]"></i> Let's talk about{" "}
         <br className="hidden xl:inline" /> your next project!
