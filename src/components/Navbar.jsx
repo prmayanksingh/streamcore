@@ -2,7 +2,7 @@ import "../style/font.css";
 import { useEffect, useRef } from "react";
 import StaggeredMenu from "./ui/StaggeredMenu";
 import gsap from "gsap";
-import StreamCoreLogo from '../assets/images/StreamCoreLogo.png'
+import StreamCoreLogo from '../assets/images/StreamCoreLogo.PNG'
 
 const Navbar = () => {
   const fadeinRef = useRef();

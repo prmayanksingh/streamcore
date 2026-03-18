@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import FeaturedWorkCard from "../../components/FeaturedWorkCard";
 import gsap from "gsap";
-import RJ_PERFUMES from "../../assets/images/projects/RJ_PERFUMES.png";
-import GRACEWOOD_SERVICE from "../../assets/images/projects/GRACEWOOD_SERVICES.png";
-import SEASONS_PROPERTIES from "../../assets/images/projects/SEASONS_PROPERTIES.png";
-import NISARA_BEAUTY from "../../assets/images/projects/NISARA_BEAUTY.png";
-import LOCAL_MAFIA from "../../assets/images/projects/LOCAL_MAFIA.png";
-import ELEGANCE_RETREAT from "../../assets/images/projects/ELEGANCE_RETREAT.png";
+import RJ_PERFUMES from "../../assets/images/projects/RJ_PERFUMES.PNG";
+import GRACEWOOD_SERVICE from "../../assets/images/projects/GRACEWOOD_SERVICES.PNG";
+import SEASONS_PROPERTIES from "../../assets/images/projects/SEASONS_PROPERTIES.PNG";
+import NISARA_BEAUTY from "../../assets/images/projects/NISARA_BEAUTY.PNG";
+import LOCAL_MAFIA from "../../assets/images/projects/LOCAL_MAFIA.PNG";
+import ELEGANCE_RETREAT from "../../assets/images/projects/ELEGANCE_RETREAT.PNG";
 
 const FeaturedWorkSection = () => {
   const [data, setData] = useState([
