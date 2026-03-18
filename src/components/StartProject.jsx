@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import FlipLink from "./ui/FlipLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import blurCube from '../assets/images/contact/blurCube.webp'
+import astroHelmet from '../assets/images/contact/astroHelmet.webp'
+import spring from '../assets/images/contact/spring.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -43,21 +46,21 @@ const StartProject = () => {
       </Link>
       <img
         className="z-99 h-[100vw] xl:h-[70vw] absolute top-0 xl:top-[-12em] right-[-5em] xl:right-[0]"
-        src="../src/assets/images/contact/blurCube.webp"
+        src={blurCube}
         loading="lazy"
         decoding="async"
         alt="blur cube"
       />
       <img
         className="z-99 absolute hidden xl:inline h-[23em] bottom-[4em] right-[5em]"
-        src="../src/assets/images/contact/astroHelmet.webp"
+        src={astroHelmet}
         loading="lazy"
         decoding="async"
         alt="astro-helmet"
       />
       <img
         className="z-99 absolute hidden xl:inline h-[8em] bottom-[8em] right-[30em]"
-        src="../src/assets/images/contact/spring.webp"
+        src={spring}
         loading="lazy"
         decoding="async"
         alt="spring"

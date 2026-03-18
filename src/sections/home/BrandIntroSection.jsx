@@ -1,5 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import heartImg from "../../assets/images/brandIntro/heart.webp";
+import astroHelmetImg from "../../assets/images/brandIntro/astroHelmet.webp";
+import cubeImg from "../../assets/images/brandIntro/cube.webp";
+import curvedTextImg from "../../assets/images/curved-text.png";
+import spiralImg from "../../assets/images/spiral.webp";
+import spiralVideo from '../../assets/spiralVideo.mp4'
 
 const BrandIntroSection = () => {
   const fadeinRef = useRef([]);
@@ -15,19 +21,23 @@ const BrandIntroSection = () => {
       opacity: 0,
       duration: 1.2,
       ease: "power3.out",
-      delay: .3,
+      delay: 0.3,
     });
     tl.from(heading2Ref.current, {
       y: 150,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
-      delay: .3,
-    }).from(fadeinRef.current, {
-      opacity: 0,
-      duration: 1.7,
-      ease: "power3.out",
-    },"-=.2");
+      delay: 0.3,
+    }).from(
+      fadeinRef.current,
+      {
+        opacity: 0,
+        duration: 1.7,
+        ease: "power3.out",
+      },
+      "-=.2",
+    );
 
     // Heart Scale animation
     gsap.to(fadeinRef.current[0], {
@@ -168,7 +178,7 @@ const BrandIntroSection = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="../src/assets/spiralVideo.mp4" type="video/mp4" />
+            <source src={spiralVideo} type="video/mp4" />
           </video>
           <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full">
             <i className="ri-play-large-fill"></i>
@@ -177,13 +187,13 @@ const BrandIntroSection = () => {
         <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424]">
           <div className="relative h-[13em] lg:h-[8em] w-[13em] lg:w-[8em] flex items-center justify-center">
             <img
-              src="../src/assets/images/curved-text.png"
+              src={curvedTextImg}
               className="h-full w-full scale-[230%] bg-cover"
               alt="curved-text"
             />
             <img
               className="absolute h-[3.7em] lg:h-[2.3em]"
-              src="../src/assets/images/spiral.webp"
+              src={spiralImg}
               alt="spiral image"
             />
           </div>
@@ -207,19 +217,19 @@ const BrandIntroSection = () => {
       <img
         ref={(el) => (fadeinRef.current[0] = el)}
         className="hidden md:inline absolute z-99 h-[10em] lg:h-[12em] xl:h-[14em] right-[72%] lg:right-[73%] xl:right-[70%] top-[10%] md:top-[8%] lg:top-[0%] xl:top-[-5%]"
-        src="../src/assets/images/brandIntro/heart.webp"
+        src={heartImg}
         alt="Heart Image"
       />
       <img
         ref={(el) => (fadeinRef.current[1] = el)}
         className="hidden md:inline absolute z-101 h-[9em] lg:h-[9em] xl:h-[11em] left-[73%] md:left-[74%] xl:left-[71%] top-[2%] md:top-[5%] lg:top-[-7%] xl:top-[-10%]"
-        src="../src/assets/images/brandIntro/astroHelmet.webp"
+        src={astroHelmetImg}
         alt="AstroHelmet Image"
       />
       <img
         ref={(el) => (fadeinRef.current[2] = el)}
         className="hidden md:inline absolute z-101 h-[8em] right-[45%] top-[22%] lg:top-[40%] xl:top-[44%]"
-        src="../src/assets/images/brandIntro/cube.webp"
+        src={cubeImg}
         alt="cube Image"
       />
     </div>

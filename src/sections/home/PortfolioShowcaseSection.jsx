@@ -2,46 +2,52 @@ import React, { useRef, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
+import RJ_PERFUMES from '../../assets/images/projects/RJ_PERFUMES.PNG'
+import GRACEWOOD_SERVICE from '../../assets/images/projects/GRACEWOOD_SERVICES.PNG'
+import SEASONS_PROPERTIES from '../../assets/images/projects/SEASONS_PROPERTIES.PNG'
+import NISARA_BEAUTY from '../../assets/images/projects/NISARA_BEAUTY.PNG'
+import LOCAL_MAFIA from '../../assets/images/projects/LOCAL_MAFIA.PNG'
+import ELEGANCE_RETREAT from '../../assets/images/projects/ELEGANCE_RETREAT.PNG'
 
 const PortfolioShowcaseSection = () => {
   const [ProjectCardDetails, setProjectCardDetails] = useState([
     {
-      imageSrc: "../src/assets/images/projects/RJ_PERFUMES.PNG",
+      imageSrc: RJ_PERFUMES,
       heading: "RJ PERFUMES",
       description:
         "A comprehensive e-commerce platform with a modern design and user-friendly interface.",
       tags: ["Web Design", "Landing Page", "Responsive"],
     },
     {
-      imageSrc: "../src/assets/images/projects/GRACEWOOD_SERVICES.PNG",
+      imageSrc: GRACEWOOD_SERVICE,
       heading: "GRACEWOOD SERVICES",
       description:
         "Air conditioning services website with booking and service management features.",
       tags: ["Web Design", "Services", "Digital Solutions"],
     },
     {
-      imageSrc: "../src/assets/images/projects/SEASONS_PROPERTIES.PNG",
+      imageSrc: SEASONS_PROPERTIES,
       heading: "SEASONS PROPERTIES",
       description:
         "Custom real estate solution with advanced features and payment integration.",
       tags: ["Services", "Web Development", "Custom Solution"],
     },
     {
-      imageSrc: "../src/assets/images/projects/NISARA_BEAUTY.PNG",
+      imageSrc: NISARA_BEAUTY,
       heading: "NISARA BEAUTY",
       description:
         "Modern perfume website with a beautiful and responsive design.",
       tags: ["Service", "Web Design", "Landing Page"],
     },
     {
-      imageSrc: "../src/assets/images/projects/LOCAL_MAFIA.PNG",
+      imageSrc: LOCAL_MAFIA,
       heading: "LOCAL MAFIA",
       description:
         "Modern e-commerce website with a beautiful and responsive design.",
       tags: ["Service", "Web Design", "Web Development"],
     },
     {
-      imageSrc: "../src/assets/images/projects/ELEGANCE_RETREAT.PNG",
+      imageSrc: ELEGANCE_RETREAT,
       heading: "ELEGANCE RETREAT",
       description:
         "Modern hotel website with a beautiful and responsive design.",

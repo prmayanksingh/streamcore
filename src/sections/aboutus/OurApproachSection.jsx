@@ -4,8 +4,12 @@ import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import heart from "../../assets/images/ourProcess/heart.webp";
+import hexa from "../../assets/images/ourProcess/hexa.webp";
+import bubble from "../../assets/images/ourProcess/bubble.webp";
+import spiral from "../../assets/images/ourProcess/spiral.webp";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const OurApproachSection = () => {
   const [data, setData] = useState([
@@ -14,28 +18,28 @@ const OurApproachSection = () => {
       tag1: "Founded",
       tag2: "Mission",
       step: "Impact",
-      img: "../src/assets/images/ourProcess/heart.webp",
+      img: heart,
     },
     {
       title: "Our Values",
       tag1: "Integrity",
       tag2: "Innovation",
       step: "Core Principles",
-      img: "../src/assets/images/ourProcess/hexa.webp",
+      img: hexa,
     },
     {
       title: "Who we are",
       tag1: "Experts",
       tag2: "Creators",
       step: "Talent",
-      img: "../src/assets/images/ourProcess/bubble.webp",
+      img: bubble,
     },
     {
       title: "Our Promise",
       tag1: "Quality",
       tag2: "Results",
       step: "Commitment",
-      img: "../src/assets/images/ourProcess/spiral.webp",
+      img: spiral,
     },
   ]);
 

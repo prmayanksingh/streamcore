@@ -1,5 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import coffee1 from '../../assets/images/aboutUs/coffee1.webp'
+import coffee2 from '../../assets/images/aboutUs/coffee2.webp'
 
 const IntroSection = () => {
   const boxRef = useRef(null);
@@ -18,7 +20,7 @@ const IntroSection = () => {
         <div className="w-full xl:w-[90%] h-[30em] md:h-[38em] xl:h-full rounded-[2em] overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src="../src/assets/images/aboutUs/coffee1.webp"
+            src={coffee1}
             alt="guy drinking coffee"
           />
         </div>
@@ -50,7 +52,7 @@ const IntroSection = () => {
         <div className="w-full h-[30em] md:h-[38em] rounded-[2em] overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src="../src/assets/images/aboutUs/coffee2.webp"
+            src={coffee2}
             alt="girl drinking coffee"
           />
         </div>

@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import ServiceCard from "../../components/ServiceCard";
+import bubbleSmall from '../../assets/images/bubbleSmall.webp'
+import bubble from '../../assets/images/bubble.webp'
+import cubeSmall from '../../assets/images/cubeSmall.webp'
+import cubes from '../../assets/images/cubes.webp'
+import woodenObjectSmall from '../../assets/images/woodenObjectSmall.webp'
+import woodenObject from '../../assets/images/woodenObject.webp'
+import purpleHeartSmall from '../../assets/images/purpleHeartSmall.webp'
+import purpleHeart from '../../assets/images/purpleHeart.webp'
 
 const ServicesSection = () => {
   const [services, setServices] = useState([
@@ -10,8 +18,8 @@ const ServicesSection = () => {
         "High-performance websites and web applications built with modern technologies. Scalable, secure, and optimized for growth.",
       tags: ["Frontend", "Backend", "Fullstack", "E-Commerce", "Next.js"],
       bgColor: "#FAF7F6",
-      smallImg: "../src/assets/images/bubbleSmall.webp",
-      largeImg: "../src/assets/images/bubble.webp",
+      smallImg: bubbleSmall,
+      largeImg: bubble,
       buttonColor: "#1963F7",
       arrowColor: "#FCFDFF",
     },
@@ -23,8 +31,8 @@ const ServicesSection = () => {
         descriptionColor:"#50501D",
       tags: ["Chatbots", "Workflow", "Automation", "AI Solutions"],
       bgColor: "#FFFF33",
-      smallImg: "../src/assets/images/cubeSmall.webp",
-      largeImg: "../src/assets/images/cubes.webp",
+      smallImg: cubeSmall,
+      largeImg: cubes,
       buttonColor: "#161616",
       arrowColor: "#FCFCFC",
     },
@@ -37,8 +45,8 @@ const ServicesSection = () => {
       descriptionColor: "#ABABAB",
       tags: ["Strategy", "Content", "Engagement", "Community", "Analytics"],
       bgColor: "#1C1C1C",
-      smallImg: "../src/assets/images/woodenObjectSmall.webp",
-      largeImg: "../src/assets/images/woodenObject.webp",
+      smallImg: woodenObjectSmall,
+      largeImg: woodenObject,
       buttonColor: "#FAFAFA",
       arrowColor: "#111",
     },
@@ -49,8 +57,8 @@ const ServicesSection = () => {
         "Compelling ad production and creative campaigns that capture attention and drive conversions for your business.",
       tags: ["Creative", "Video", "Campaigns", "Paid Ads"],
       bgColor: "#FAF7F6",
-      smallImg: "../src/assets/images/purpleHeartSmall.webp",
-      largeImg: "../src/assets/images/purpleHeart.webp",
+      smallImg: purpleHeartSmall,
+      largeImg: purpleHeart,
       buttonColor: "#1A66FF",
       arrowColor: "#F3F7FF",
     },
@@ -62,8 +70,8 @@ const ServicesSection = () => {
         descriptionColor:"#50501D",
       tags: ["Contract Hiring", "Dedicated Teams", "Remote Talent", "Flexible Engagement"],
       bgColor: "#FFFF33",
-      smallImg: "../src/assets/images/cubeSmall.webp",
-      largeImg: "../src/assets/images/cubes.webp",
+      smallImg: cubeSmall,
+      largeImg: cubes,
       buttonColor: "#161616",
       arrowColor: "#FCFCFC",
     },

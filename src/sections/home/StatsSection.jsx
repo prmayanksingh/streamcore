@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import starImg from '../../assets/images/star.webp'
+import smartphonesImg from '../../assets/images/smartphones.webp'
+import testimonialsManImg from '../../assets/images/testimonials-man.webp'
+import testimonialsWomenImg from '../../assets/images/testimonials-women.webp'
+import robotImg from '../../assets/images/robot.webp'
+import astroHelmetImg from '../../assets/images/astroHelmet.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +74,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[21rem] absolute -bottom-34 md:bottom-5 xl:top-0 left-0 xl:-left-20 md:-left-10"
-            src="../src/assets/images/star.webp"
+            src={starImg}
             loading="lazy"
             decoding="async"
             alt="star image"
@@ -76,11 +82,15 @@ const StatsSection = () => {
         </div>
         <div className="z-97 relative h-[34em] md:h-[28em] xl:h-[27em] xl:w-[63%] px-[2em] xl:px-[2.5em] py-[2em] xl:py-[2.5em] bg-[#1C1C1C] text-white rounded-3xl overflow-hidden flex flex-col md:items-end md:justify-between">
           <div className="flex">
-            <div className="z-101 h-[5em] w-[5em] rounded-full bg-amber-50 bg-[url('../src/assets/images/testimonials-man.webp')] bg-cover"></div>
+            <div className="z-101 h-[5em] w-[5em] rounded-full bg-amber-50 bg-cover"
+            style={{ backgroundImage: `url(${testimonialsManImg})` }}
+            ></div>
             <div className="z-102 h-[5em] w-[5em] -mx-[1em] rounded-full bg-amber-50 bg-cover flex items-center justify-center">
               <i className="ri-shining-fill text-[2em] text-blue-500"></i>
             </div>
-            <div className="z-103 h-[5em] w-[5em] rounded-full bg-amber-50 bg-[url('../src/assets/images/testimonials-women.webp')] bg-cover"></div>
+            <div className="z-103 h-[5em] w-[5em] rounded-full bg-amber-50 bg-[url('../src/')] bg-cover"
+            style={{ backgroundImage: `url(${testimonialsWomenImg})` }}
+            ></div>
           </div>
           <div className="z-99 flex flex-col gap-[.4em]">
             <h1 className="text-[4.3em] xl:text-[5.5em] font-semibold">80%</h1>
@@ -90,7 +100,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 absolute -left-4 -bottom-33 md:top-15 xl:top-8 h-[23em] md:h-[26em] xl:h-[29em]"
-            src="../src/assets/images/smartphones.webp"
+            src={smartphonesImg}
             loading="lazy"
             decoding="async"
             alt="star image"
@@ -124,7 +134,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[29rem] absolute -bottom-34 md:bottom-0 xl:bottom-0 left-0 md:left-auto xl:-right-10 md:-right-9"
-            src="../src/assets/images/robot.webp"
+            src={robotImg}
             loading="lazy"
             decoding="async"
             alt="robot image"
@@ -153,7 +163,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 h-[22rem] md:h-[27rem] xl:h-[17rem] absolute -bottom-34 md:bottom-8 md:left-auto md:-right-15 xl:bottom-10 left-0 xl:-right-15"
-            src="../src/assets/images/astroHelmet.webp"
+            src={astroHelmetImg}
             loading="lazy"
             decoding="async"
             alt="robot image"

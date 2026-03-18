@@ -4,37 +4,42 @@ import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Approach1 from '../../assets/images/Approach1.webp'
+import Approach2 from '../../assets/images/Approach2.webp'
+import Approach3 from '../../assets/images/Approach3.webp'
+import Approach4 from '../../assets/images/Approach4.webp'
+import Approach5 from '../../assets/images/Approach5.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ApproachSection = () => {
   const [data, setData] = useState([
     {
-      img: "../src/assets/images/Approach1.webp",
+      img: Approach1,
       title: "Perfection",
       description:
         "From pixel-perfect designs to flawless code, every aspect of our projects is crafted with care to ensure the highest standards of quality.",
     },
     {
-      img: "../src/assets/images/Approach2.webp",
+      img: Approach2,
       title: "Innovative",
       description:
         "We stay ahead of design trends, offering modern and visually impactful solutions that set your brand apart.",
     },
     {
-      img: "../src/assets/images/Approach3.webp",
+      img: Approach3,
       title: "Expertise",
       description:
         "We are passionate about integrating the latest technologies and trends, including interactive animations and mobile-first strategies.",
     },
     {
-      img: "../src/assets/images/Approach4.webp",
+      img: Approach4,
       title: "Full-Cycle services",
       description:
         "From web design to development, branding, SEO, and UX/UI, we provide a full range of services that cover all your digital needs.",
     },
     {
-      img: "../src/assets/images/Approach5.webp",
+      img: Approach5,
       title: "Client Success",
       description:
         "Our clients consistently see improved engagement, conversion rates, and business growth.",

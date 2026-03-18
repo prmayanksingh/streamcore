@@ -4,23 +4,26 @@ import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import blockchain from '../../assets/images/blogImg/blockchain.jpg'
+import digitalMarketing from '../../assets/images/blogImg/digitalMarketing.jpg'
+import customApp from '../../assets/images/blogImg/customApp.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([
     {
-      img: "../src/assets/images/blogImg/blockchain.jpg",
+      img: blockchain,
       title: "Short Guide on the Potential of Blockchain for Businesses",
       tags: ["Blockchain", "Business Technology"],
     },
     {
-      img: "../src/assets/images/blogImg/digitalMarketing.jpg",
+      img: digitalMarketing,
       title: "Boost Your Online Presence with Digital Marketing Services",
       tags: ["Digital Marketing", "Online Growth"],
     },
     {
-      img: "../src/assets/images/blogImg/customApp.jpg",
+      img: customApp,
       title: "Why Every Business Needs Custom Application Development in 2025?",
       tags: ["Custom Software", "App Development"],
     },

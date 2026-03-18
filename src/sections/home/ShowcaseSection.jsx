@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import VRgirlImg from '../../assets/images/VRgirl.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +31,7 @@ const ShowcaseSection = () => {
         <img
           ref={imgRef}
           className="h-[120%] w-full object-cover"
-          src="../src/assets/images/VRgirl.webp"
+          src={VRgirlImg}
           alt="VR girl"
         />
       </div>

@@ -2,6 +2,8 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
+import robot from "../../assets/images/robot.webp";
+import astroHelmet from "../../assets/images/astroHelmet.webp";
 
 const StatsSection = () => {
   const boxRef = useRef(null);
@@ -45,7 +47,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[29rem] absolute -bottom-34 md:bottom-0 xl:bottom-0 left-0 md:left-auto xl:-right-10 md:-right-9"
-            src="../src/assets/images/robot.webp"
+            src={robot}
             alt="robot image"
           />
         </div>
@@ -72,7 +74,7 @@ const StatsSection = () => {
           </div>
           <img
             className="z-98 h-[22rem] md:h-[27rem] xl:h-[17rem] absolute -bottom-34 md:bottom-8 md:left-auto md:-right-15 xl:bottom-10 left-0 xl:-right-15"
-            src="../src/assets/images/astroHelmet.webp"
+            src={astroHelmet}
             alt="robot image"
           />
         </div>

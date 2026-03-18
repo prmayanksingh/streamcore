@@ -4,6 +4,10 @@ import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import heart from '../../assets/images/ourProcess/heart.webp'
+import hexa from '../../assets/images/ourProcess/hexa.webp'
+import bubble from '../../assets/images/ourProcess/bubble.webp'
+import spiral from '../../assets/images/ourProcess/spiral.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,28 +18,28 @@ const OurProcessSection = () => {
       tag1: "Research",
       tag2: "Audience",
       step: "Step 01",
-      img: "../src/assets/images/ourProcess/heart.webp",
+      img: heart,
     },
     {
       title: "Strategy",
       tag1: "Planning",
       tag2: "Content",
       step: "Step 02",
-      img: "../src/assets/images/ourProcess/hexa.webp",
+      img: hexa,
     },
     {
       title: "Execution",
       tag1: "Development",
       tag2: "Testing",
       step: "Step 03",
-      img: "../src/assets/images/ourProcess/bubble.webp",
+      img: bubble,
     },
     {
       title: "Launch & Growth",
       tag1: "Development",
       tag2: "Support",
       step: "Step 04",
-      img: "../src/assets/images/ourProcess/spiral.webp",
+      img: spiral,
     },
   ]);
 
