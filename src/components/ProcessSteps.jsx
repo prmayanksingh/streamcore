@@ -94,11 +94,11 @@ const ProcessSteps = ({ item }) => {
             className="ri-arrow-right-line text-[2.2em] xl:text-[2.6em] xl:absolute xl:opacity-0"
           ></i>
         </div>
-        <div className="flex justify-between">
+        <div className="w-[50%] flex justify-between">
           <p className="text-[1em] xl:w-[40em] text-gray-200">
             {item.tag1} <br /> {item.tag2}
           </p>
-          <p className="text-[.9em] text-gray-200">{item.step}</p>
+          <p className="text-[1em] text-gray-200 text-right">{item.step}</p>
         </div>
       </div>
       <img

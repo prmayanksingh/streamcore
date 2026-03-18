@@ -54,7 +54,12 @@ const ServiceCard = ({ service }) => {
       </Link>
       <picture className="absolute z-98 -bottom-50 sm:-bottom-85 md:-bottom-100 left-0 lg:left-auto lg:-right-70 lg:-bottom-50 scale-85 lg:scale-60">
         <source media="(min-width: 1024px)" srcSet={service.largeImg} />
-        <img src={service.smallImg} alt="bubble image" />
+        <img
+          src={service.smallImg}
+          loading="lazy"
+          decoding="async"
+          alt="bubble image"
+        />
       </picture>
     </div>
   );

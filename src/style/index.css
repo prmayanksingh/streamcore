@@ -5,27 +5,23 @@
     display: none;
 }
 
-/* Optional: Style scrollbar */
+.custom-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .custom-scroll::-webkit-scrollbar {
-    height: 8px;
-}
-
-.custom-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.custom-scroll::-webkit-scrollbar-thumb {
-    background: #9CA3AF;
-    border-radius: 10px;
+    display: none;
 }
 
 @layer base {
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #161616 inset;
-    -webkit-text-fill-color: white;
-    caret-color: white;
-  }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #161616 inset;
+        -webkit-text-fill-color: white;
+        caret-color: white;
+    }
 }

@@ -69,6 +69,8 @@ const StatsSection = () => {
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[21rem] absolute -bottom-34 md:bottom-5 xl:top-0 left-0 xl:-left-20 md:-left-10"
             src="../src/assets/images/star.webp"
+            loading="lazy"
+            decoding="async"
             alt="star image"
           />
         </div>
@@ -89,6 +91,8 @@ const StatsSection = () => {
           <img
             className="z-98 absolute -left-4 -bottom-33 md:top-15 xl:top-8 h-[23em] md:h-[26em] xl:h-[29em]"
             src="../src/assets/images/smartphones.webp"
+            loading="lazy"
+            decoding="async"
             alt="star image"
           />
         </div>
@@ -121,6 +125,8 @@ const StatsSection = () => {
           <img
             className="z-98 h-[22rem] md:h-[30rem] xl:h-[29rem] absolute -bottom-34 md:bottom-0 xl:bottom-0 left-0 md:left-auto xl:-right-10 md:-right-9"
             src="../src/assets/images/robot.webp"
+            loading="lazy"
+            decoding="async"
             alt="robot image"
           />
         </div>
@@ -148,6 +154,8 @@ const StatsSection = () => {
           <img
             className="z-98 h-[22rem] md:h-[27rem] xl:h-[17rem] absolute -bottom-34 md:bottom-8 md:left-auto md:-right-15 xl:bottom-10 left-0 xl:-right-15"
             src="../src/assets/images/astroHelmet.webp"
+            loading="lazy"
+            decoding="async"
             alt="robot image"
           />
         </div>

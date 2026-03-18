@@ -114,4 +114,3 @@ const ApproachSection = () => {
 };
 
 export default ApproachSection;
-// my-[4.5em] xl:my-[5em]

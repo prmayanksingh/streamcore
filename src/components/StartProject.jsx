@@ -44,17 +44,23 @@ const StartProject = () => {
       <img
         className="z-99 h-[100vw] xl:h-[70vw] absolute top-0 xl:top-[-12em] right-[-5em] xl:right-[0]"
         src="../src/assets/images/contact/blurCube.webp"
+        loading="lazy"
+        decoding="async"
         alt="blur cube"
       />
       <img
         className="z-99 absolute hidden xl:inline h-[23em] bottom-[4em] right-[5em]"
         src="../src/assets/images/contact/astroHelmet.webp"
-        alt=""
+        loading="lazy"
+        decoding="async"
+        alt="astro-helmet"
       />
       <img
         className="z-99 absolute hidden xl:inline h-[8em] bottom-[8em] right-[30em]"
         src="../src/assets/images/contact/spring.webp"
-        alt=""
+        loading="lazy"
+        decoding="async"
+        alt="spring"
       />
     </div>
   );

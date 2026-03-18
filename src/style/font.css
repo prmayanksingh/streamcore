@@ -1,14 +1,14 @@
-@font-face {
+/* @font-face {
   font-family: 'monument';
-  src: url('../assets/fonts/MonumentExtended-Regular.otf');
-}
+  src: url('../assets/fonts/MonumentExtended-Regular.woff2');
+} */
 
 @font-face {
   font-family: 'gilroy';
-  src: url('../assets/fonts/Gilroy-Regular.ttf');
+  src: url('../assets/fonts/Gilroy-Regular.woff2');
 }
 
 @font-face{
   font-family: 'funnel';
-  src: url('../assets/fonts/FunnelDisplay-VariableFont_wght.ttf');
+  src: url('../assets/fonts/FunnelDisplay-VariableFont_wght.woff2');
 }

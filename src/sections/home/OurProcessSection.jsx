@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const OurProcessSection = () => {
   const [data, setData] = useState([
@@ -40,40 +40,57 @@ const OurProcessSection = () => {
   ]);
 
   const flipRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
-    const steps = gsap.utils.toArray(".steps");
-    const lines = gsap.utils.toArray(".line");
+    if (!sectionRef.current) return;
 
-    steps.forEach((step) => {
-      gsap.from(step, {
-        y: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: step,
-          start: "top 90%",
-          end: "top 70%",
-          scrub: true,
-        },
-      });
-    });
+    const ctx = gsap.context(() => {
+      const steps = gsap.utils.toArray(".steps");
+      const lines = gsap.utils.toArray(".line");
 
-    lines.forEach((line) => {
-      gsap.from(line, {
-        y: 40,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: line,
-          start: "top 95%",
-          end: "top 70%",
-          scrub: true,
-        },
+      steps.forEach((step) => {
+        gsap.from(step, {
+          y: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: step,
+            start: "top 90%",
+            end: "top 70%",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
       });
-    });
+
+      lines.forEach((line) => {
+        gsap.from(line, {
+          y: 40,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: line,
+            start: "top 95%",
+            end: "top 70%",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      });
+    }, sectionRef);
+
+    const id = requestAnimationFrame(() => ScrollTrigger.refresh());
+
+    return () => {
+      cancelAnimationFrame(id);
+      ctx.revert();
+    };
   }, []);
 
   return (
-    <div className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="px-[1.5rem] md:px-[4rem] pt-[4em] py-[5rem] overflow-hidden"
+    >
       <div className="flex flex-col xl:flex-row xl:justify-between gap-[1.9em]">
         <h1 className="text-[2.8em] md:text-[4.5em] font-semibold leading-[1.1em]">
           Our Process <br />& Approach
