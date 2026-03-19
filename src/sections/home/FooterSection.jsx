@@ -72,19 +72,19 @@ const FooterSection = () => {
         </Link>
       </div>
       <div className="box w-full rounded-4xl flex flex-col gap-[2em] xl:gap-[1.5em]">
-        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C]">
+        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C] overflow-y-hidden overflow-x-scroll custom-scroll-footer">
           <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
           <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
             hr@streamcoretechnologies.com
           </h1>
         </div>
-        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C] p-[1em]">
+        <div className="h-[25%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex items-center gap-[.7em] rounded-2xl bg-[#1C1C1C] p-[1em] overflow-y-hidden overflow-x-scroll custom-scroll-footer">
           <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
           <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
             +91 9415337435
           </h1>
         </div>
-        <div className="h-[50%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex flex-col justify-center gap-[.5em] rounded-2xl bg-[#1C1C1C] p-[1em]">
+        <div className="h-[50%] px-[1.5em] md:px-[3.5em] xl:px-[2.5em] py-[1.3em] flex flex-col justify-center gap-[.5em] rounded-2xl bg-[#1C1C1C] p-[1em] overflow-y-hidden overflow-x-scroll custom-scroll-footer">
           <div className="flex items-center gap-[.7em]">
             <i className="ri-shining-fill text-[1.1em] md:text-[1.5em]"></i>
             <h1 className="text-[1.1em] md:text-[1.5em] xl:text-[1.3em]">
