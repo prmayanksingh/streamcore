@@ -1,6 +1,30 @@
 @import "tailwindcss";
 
-/* Hide scrollbar arrows */
+/* Global scrollbar */
+html, body {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160, 160, 160, 0.6) #161616; /* thumb track */
+}
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #161616;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(160, 160, 160, 0.6);
+  border-radius: 999px;
+}
+
+/* Testimonials scroll bar */
 .custom-scroll::-webkit-scrollbar-button {
     display: none;
 }
@@ -14,6 +38,7 @@
     display: none;
 }
 
+/* Footer scroll bar */
 .custom-scroll-footer {
     overflow-x: auto;
 
