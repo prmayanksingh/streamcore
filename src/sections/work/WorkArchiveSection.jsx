@@ -36,6 +36,21 @@ const WorkArchiveSection = () => {
       date: "February 2025",
       roles: ["Service", "Responsive", "Web Design"],
     },
+    {
+      title: "DATING PARI",
+      date: "March 2025",
+      roles: ["Web App", "Social", "Responsive"],
+    },
+    {
+      title: "SABKA DENTIST",
+      date: "April 2025",
+      roles: ["Healthcare", "Service", "Landing Page"],
+    },
+    {
+      title: "JENX KARO",
+      date: "February 2025",
+      roles: ["E-commerce", "Marketplace", "Responsive"],
+    },
   ]);
 
   const flipRef = useRef(null);

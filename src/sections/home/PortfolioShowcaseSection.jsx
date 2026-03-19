@@ -2,12 +2,15 @@ import React, { useRef, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import { Link } from "react-router-dom";
 import FlipLink from "../../components/ui/FlipLink";
-import RJ_PERFUMES from '../../assets/images/projects/RJ_PERFUMES.PNG'
-import GRACEWOOD_SERVICE from '../../assets/images/projects/GRACEWOOD_SERVICES.PNG'
-import SEASONS_PROPERTIES from '../../assets/images/projects/SEASONS_PROPERTIES.PNG'
-import NISARA_BEAUTY from '../../assets/images/projects/NISARA_BEAUTY.PNG'
-import LOCAL_MAFIA from '../../assets/images/projects/LOCAL_MAFIA.PNG'
-import ELEGANCE_RETREAT from '../../assets/images/projects/ELEGANCE_RETREAT.PNG'
+import RJ_PERFUMES from "../../assets/images/projects/RJ_PERFUMES.webp";
+import GRACEWOOD_SERVICE from "../../assets/images/projects/GRACEWOOD_SERVICES.webp";
+import SEASONS_PROPERTIES from "../../assets/images/projects/SEASONS_PROPERTIES.webp";
+import NISARA_BEAUTY from "../../assets/images/projects/NISARA_BEAUTY.webp";
+import LOCAL_MAFIA from "../../assets/images/projects/LOCAL_MAFIA.webp";
+import ELEGANCE_RETREAT from "../../assets/images/projects/ELEGANCE_RETREAT.webp";
+import JenxKaro from "../../assets/images/projects/JenxKaro.webp";
+import DatingPari from "../../assets/images/projects/DatingPari.webp";
+import SabkaDentist from "../../assets/images/projects/SabkaDentist.webp";
 
 const PortfolioShowcaseSection = () => {
   const [ProjectCardDetails, setProjectCardDetails] = useState([
@@ -52,6 +55,27 @@ const PortfolioShowcaseSection = () => {
       description:
         "Modern hotel website with a beautiful and responsive design.",
       tags: ["Service", "Responsive", "Web Design"],
+    },
+    {
+      imageSrc: DatingPari,
+      heading: "DATING PARI",
+      description:
+        "Modern dating platform with chat, video calls, and real-time connections.",
+      tags: ["Web App", "Social", "Responsive"],
+    },
+    {
+      imageSrc: SabkaDentist,
+      heading: "SABKA DENTIST",
+      description:
+        "Dental services website with booking, treatments, and a clean responsive design.",
+      tags: ["Healthcare", "Service", "Landing Page"],
+    },
+    {
+      imageSrc: JenxKaro,
+      heading: "JENX KARO",
+      description:
+        "Electrical marketplace with product search, categories, and smooth user experience.",
+      tags: ["E-commerce", "Marketplace", "Responsive"],
     },
   ]);
 
