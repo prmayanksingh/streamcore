@@ -193,7 +193,7 @@ const BrandIntroSection = () => {
             <i className="ri-play-large-fill"></i>
           </div>
         </div>
-        <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424]">
+        <div className="px-[2em] lg:px-0 lg:py-[1.7em] flex flex-col lg:flex-row gap-[1.8em] lg:flex lg:justify-between lg:border-t-4 lg:border-dashed lg:border-[#242424] overflow-hidden">
           <div className="relative h-[13em] lg:h-[8em] w-[13em] lg:w-[8em] flex items-center justify-center">
             <img
             ref={curvTextRef}

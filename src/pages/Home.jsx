@@ -27,7 +27,7 @@ const Home = () => {
   });
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <Navbar />
       <div className="h-[5em] lg:h-[8em] xl:h-[9em] w-full"></div>
       <BrandIntroSection />
