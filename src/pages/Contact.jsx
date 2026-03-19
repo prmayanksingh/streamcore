@@ -6,7 +6,7 @@ import FooterSection from "../sections/home/FooterSection";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
       <div className="h-[5em] lg:h-[8em] xl:h-[9em] w-full"></div>
       <HeroSection />
