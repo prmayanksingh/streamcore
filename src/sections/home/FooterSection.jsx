@@ -34,7 +34,7 @@ const FooterSection = () => {
           to={"/"}
           onMouseEnter={() => flipRef1.current.play()}
           onMouseLeave={() => flipRef1.current.reverse()}
-          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+          className="w-fit text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
         >
           <FlipLink ref={flipRef1} text={"Home"} />
         </Link>
@@ -42,7 +42,7 @@ const FooterSection = () => {
           to={"/aboutus"}
           onMouseEnter={() => flipRef2.current.play()}
           onMouseLeave={() => flipRef2.current.reverse()}
-          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+          className="w-fit text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
         >
           <FlipLink ref={flipRef2} text={"About"} />
         </Link>
@@ -50,7 +50,7 @@ const FooterSection = () => {
           to={"/work"}
           onMouseEnter={() => flipRef3.current.play()}
           onMouseLeave={() => flipRef3.current.reverse()}
-          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+          className="w-fit text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
         >
           <FlipLink ref={flipRef3} text={"Works"} />
         </Link>
@@ -58,7 +58,7 @@ const FooterSection = () => {
           to={"/services"}
           onMouseEnter={() => flipRef4.current.play()}
           onMouseLeave={() => flipRef4.current.reverse()}
-          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+          className="w-fit text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
         >
           <FlipLink ref={flipRef4} text={"Services"} />
         </Link>
@@ -66,7 +66,7 @@ const FooterSection = () => {
           to={"/contact"}
           onMouseEnter={() => flipRef5.current.play()}
           onMouseLeave={() => flipRef5.current.reverse()}
-          className="text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
+          className="w-fit text-[2.3em] md:text-[2.7em] xl:text-[2.4em] font-semibold"
         >
           <FlipLink ref={flipRef5} text={"Contact"} />
         </Link>
@@ -102,18 +102,18 @@ const FooterSection = () => {
           Ecosystem
         </h1>
         <div className="flex flex-col gap-[.4em] md:gap-[.7em]">
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+          <a href="https://www.instagram.com/streamcore_web_technologies/?hl=en" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Instagram
-          </h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+          </a>
+          <a href="https://x.com/" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Twitter
-          </h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+          </a>
+          <a href="https://www.linkedin.com/company/stream-core-web-technologies/posts/?feedView=all" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Linkedin
-          </h2>
-          <h2 className="text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
+          </a>
+          <a href="https://www.youtube.com/" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Youtube
-          </h2>
+          </a>
         </div>
       </div>
     </footer>
