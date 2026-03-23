@@ -404,7 +404,7 @@ export const StaggeredMenu = ({
           const raw =
             colors && colors.length
               ? colors.slice(0, 4)
-              : ["#1e1e22", "#35353c"];
+              : ["#1e1e22", "#z"];
           let arr = [...raw];
           if (arr.length >= 3) {
             const mid = Math.floor(arr.length / 2);

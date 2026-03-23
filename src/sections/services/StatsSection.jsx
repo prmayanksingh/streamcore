@@ -31,7 +31,7 @@ const StatsSection = () => {
               Years of experience <br /> delivering excellence
             </h4>
           </div>
-          <div className="z-99">
+          <div className="z-99 text-[clamp(12px,3vw,16px)]">
             <Link
               to={"/contact"}
               onMouseEnter={() => flipRef1.current.play()}
@@ -58,7 +58,7 @@ const StatsSection = () => {
               Projects successfully <br /> completed
             </h4>
           </div>
-          <div className="z-99">
+          <div className="z-99 text-[clamp(12px,3vw,16px)]">
             <Link
               to={"/work"}
               onMouseEnter={() => flipRef2.current.play()}

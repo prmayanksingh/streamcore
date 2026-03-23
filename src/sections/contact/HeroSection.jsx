@@ -43,10 +43,10 @@ const HeroSection = () => {
         <i className="ri-shining-fill"></i> Contact
       </h5>
       <div className="flex flex-col gap-[2.5em]">
-        <h1 ref={headingRef} className="w-fit text-[3.9em] md:text-[5.5em] xl:text-[6em] leading-[1.1em] xl:leading-[1.2em] font-semibold">
+        <h1 ref={headingRef} className="w-fit text-[clamp(50px,8vw,65px)] md:text-[5.5em] xl:text-[6em] leading-[1.1em] xl:leading-[1.2em] font-semibold">
           Let's Create Brilliance Together
         </h1>
-        <p ref={descriptionRef} className="text-[1.5em] leading-[1.6em]">
+        <p ref={descriptionRef} className="text-[clamp(20px,3vw,25px)] leading-[1.6em]">
           Your vision deserves to be seen. We are ready to transform your ideas
           into exceptional digital experiences that captivate your audience and
           drive growth.

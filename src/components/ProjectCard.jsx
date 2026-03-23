@@ -4,10 +4,10 @@ const ProjectCard = ({ cardDetails }) => {
   return (
     <div className="w-full xl:w-[48em] flex flex-col gap-[1em] items-center">
       <div
-        className="h-[28em] md:h-[34em] xl:h-[45em] w-full xl:w-[48em] bg-white/2 bg-center bg-contain bg-no-repeat rounded-4xl flex items-end"
+        className="h-[20em] md:h-[25em] xl:h-[30em] w-full xl:w-[48em] bg-white/2 bg-center bg-contain bg-no-repeat rounded-4xl flex items-end"
         style={{ backgroundImage: `url('${cardDetails.imageSrc}')` }}
       >
-        <div className="px-[2em] py-[2em] flex flex-wrap gap-[.6em]">
+        <div className="px-[1em] py-[2em] flex flex-wrap gap-[.6em]">
           {cardDetails.tags.map((tag, index) => (
             <div
               key={index}

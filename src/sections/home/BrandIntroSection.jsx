@@ -189,7 +189,7 @@ const BrandIntroSection = () => {
           >
             <source src={spiralVideo} type="video/mp4" />
           </video>
-          <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full">
+          <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full cursor-not-allowed">
             <i className="ri-play-large-fill"></i>
           </div>
         </div>
