@@ -111,9 +111,6 @@ const FooterSection = () => {
           <a href="https://www.linkedin.com/company/stream-core-web-technologies/posts/?feedView=all" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Linkedin
           </a>
-          <a href="https://www.youtube.com/" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
-            Youtube
-          </a>
         </div>
       </div>
     </footer>

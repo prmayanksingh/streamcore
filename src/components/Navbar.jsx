@@ -26,8 +26,8 @@ const Navbar = () => {
 
   const socialItems = [
     { label: "Twitter", link: "https://twitter.com" },
-    { label: "GitHub", link: "https://github.com" },
-    { label: "LinkedIn", link: "https://linkedin.com" },
+    { label: "Instagram", link: "https://www.instagram.com/streamcore_web_technologies/?hl=en" },
+    { label: "LinkedIn", link: "https://www.linkedin.com/company/stream-core-web-technologies/posts/?feedView=all" },
   ];
 
   return (
