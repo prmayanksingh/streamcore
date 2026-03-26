@@ -46,7 +46,7 @@ const BlogSection = () => {
   }, []);
 
   return (
-    <section className="px-[1.5rem] md:px-[4rem] py-[4rem] xl:py-[8rem] flex flex-col gap-[5rem]">
+    <section className="px-[1.5rem] md:px-[4rem] pb-[4rem] xl:pb-[8rem] pt-[4rem] md:pt-[5rem] flex flex-col gap-[5rem]">
       <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-[1.6em] xl:gap-[2em]">
         <h1 className="text-[2.7em] md:text-[4.4em] font-semibold leading-none">
           Latest Blog

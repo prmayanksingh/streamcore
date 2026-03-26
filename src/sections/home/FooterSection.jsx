@@ -105,9 +105,6 @@ const FooterSection = () => {
           <a href="https://www.instagram.com/streamcore_web_technologies/?hl=en" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Instagram
           </a>
-          <a href="https://x.com/" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
-            Twitter
-          </a>
           <a href="https://www.linkedin.com/company/stream-core-web-technologies/posts/?feedView=all" className="w-fit text-[1.3em] md:text-[1.7em] font-light hover:text-gray-400 transition-colors duration-200 cursor-pointer">
             Linkedin
           </a>

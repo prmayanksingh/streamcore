@@ -26,11 +26,12 @@ const ServicesSection = () => {
     {
       title1: "AI Agents &",
       title2: "Automations",
+      textColor: "#FAFAFA",
       description:
         "Intelligent AI-powered solutions that automate workflows, enhance customer experiences, and drive business efficiency.",
-        descriptionColor:"#50501D",
+        descriptionColor:"#fff",
       tags: ["Chatbots", "Workflow", "Automation", "AI Solutions"],
-      bgColor: "#FFFF33",
+      bgColor: "#2845D6",
       smallImg: cubeSmall,
       largeImg: cubes,
       buttonColor: "#161616",
@@ -65,11 +66,12 @@ const ServicesSection = () => {
     {
       title1: "Contractual",
       title2: "Resources",
+      textColor: "#FAFAFA",
       description:
         "Skilled contractual resources for your project needs. Scale your team quickly with vetted professionals who integrate seamlessly and deliver results without long-term commitments.",
-        descriptionColor:"#50501D",
+        descriptionColor:"#fff",
       tags: ["Contract Hiring", "Dedicated Teams", "Remote Talent", "Flexible Engagement"],
-      bgColor: "#FFFF33",
+      bgColor: "#2845D6",
       smallImg: cubeSmall,
       largeImg: cubes,
       buttonColor: "#161616",

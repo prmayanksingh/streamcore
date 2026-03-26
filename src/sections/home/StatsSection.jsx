@@ -51,14 +51,14 @@ const StatsSection = () => {
         ref={box1Ref}
         className="flex flex-col xl:flex-row gap-[2.5em] xl:gap-[1.9em] text-black"
       >
-        <div className="relative h-[34em] md:h-[28em] xl:h-[27em] xl:w-[37%] px-[2em] md:px-[3em] xl:px-[1em] py-[.7em] md:py-[1.3em] md:pb-[2em] flex flex-col md:justify-between md:items-end gap-[2em] bg-[#FFFF33] rounded-3xl overflow-hidden">
+        <div className="relative h-[34em] md:h-[28em] xl:h-[27em] xl:w-[37%] px-[2em] md:px-[3em] xl:px-[1em] py-[.7em] md:py-[1.3em] md:pb-[2em] flex flex-col md:justify-between md:items-end gap-[2em] bg-[#2845D6] rounded-3xl overflow-hidden">
           <div className="z-99 flex flex-col gap-[.4em]">
-            <h1 className="text-[4.3em] xl:text-[5em] font-semibold">90+</h1>
-            <h4 className="text-[1.1em] font-light">
+            <h1 className="text-[4.3em] xl:text-[5em] text-white font-semibold">90+</h1>
+            <h4 className="text-[1.1em] text-white font-light">
               Happy clients who <br /> trust our work
             </h4>
           </div>
-          <div className="z-99 text-[clamp(12px,3vw,16px)]">
+          <div className="z-99 text-[clamp(12px,3vw,16px)] text-white">
             <Link
               to={"/contact"}
               onMouseEnter={() => flipRef1.current.play()}

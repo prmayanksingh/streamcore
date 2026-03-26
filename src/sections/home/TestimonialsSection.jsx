@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
       name: "Levan Z",
       role: "Owner, Cleaning Chief",
       description:
-        "We switched all our marketing to them - Google Ads, Meta Ads, SEO, and lead generation. Two main reasons: they're results-driven and optimize campaigns within 2-3 days based on real data, not guesswork. Second, they're flexible with pricing when results don't meet expectations. Plus, you talk directly to the specialists doing the work, not through project managers. That direct access and transparency made all the difference.",
+        "We switched all our marketing to them - Google Ads, Meta Ads, SEO, and lead generation. Two main reasons: they're results-driven and optimize campaigns within 2-3 days based on real data, not guesswork. Second, they're flexible with pricing when results don't meet expectations.",
     },
     {
       img: RPLindeman,

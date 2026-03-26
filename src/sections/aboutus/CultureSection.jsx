@@ -22,7 +22,7 @@ const CultureSection = ({img}) => {
   }, []);
 
   return (
-    <section className="h-[45rem] sm:h-[50em] md:h-[55rem] xl:h-[65rem] w-full px-[2em] md:px-[3em] xl:px-[4em] py-[8em]">
+    <section className="h-[45rem] sm:h-[50em] md:h-[55rem] xl:h-[65rem] w-full px-[2em] md:px-[3em] xl:px-[4em] py-[4em] xl:py-[7em]">
       <div
         ref={containerRef}
         className="h-full w-full bg-gray-500 rounded-4xl overflow-hidden flex items-center justify-center"

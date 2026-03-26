@@ -40,8 +40,8 @@ const Home = () => {
       <ApproachSection />
       <OurProcessSection />
       <TestimonialsSection />
-      <HeroMarquee data={marquee.secondMarquee} />
-      <ClientsSection />
+      {/* <HeroMarquee data={marquee.secondMarquee} /> */}
+      {/* <ClientsSection /> */}
       <BlogSection />
       <StartProjectSection />
       <FooterSection />

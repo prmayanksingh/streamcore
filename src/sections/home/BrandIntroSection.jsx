@@ -95,8 +95,8 @@ const BrandIntroSection = () => {
           <h1 className="text-[4em] md:text-[5em] xl:text-[6.5em] font-semibold">
             Design ,
           </h1>{" "}
-          <div className="flex items-center justify-end h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#FFFF33] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
-            <div ref={techRef} className="flex items-center gap-[1em]">
+          <div className="flex items-center justify-end h-[4em] md:h-[4.7em] xl:h-[6em] w-[25em] sm:w-[39em] md:w-[14em] xl:w-[15em] my-[.8em] sm:my-[1.2em] md:my-[.1em] bg-[#2845D6] text-black rounded-full gap-[1em] whitespace-nowrap overflow-hidden">
+            <div ref={techRef} className="flex items-center gap-[1em] text-white">
               {/* first set */}
               <div className="flex items-center gap-[1em]">
                 <h1 className="text-[4.5em] md:text-[5em] xl:text-[6em] font-semibold">
@@ -189,7 +189,7 @@ const BrandIntroSection = () => {
           >
             <source src={spiralVideo} type="video/mp4" />
           </video>
-          <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-amber-300 flex items-center justify-center rounded-full cursor-not-allowed">
+          <div className="absolute lg:text-[.8em] bottom-[1em] right-[1em] w-[3.5em] lg:w-[2.4em] h-[3.5em] lg:h-[2.5em] px-[1em] bg-[#2845D6] flex items-center justify-center rounded-full cursor-not-allowed">
             <i className="ri-play-large-fill"></i>
           </div>
         </div>
