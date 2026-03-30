@@ -16,16 +16,19 @@ const BlogSection = () => {
       img: blockchain,
       title: "Short Guide on the Potential of Blockchain for Businesses",
       tags: ["Blockchain", "Business Technology"],
+      blogRoutes: "/blog/ai-replacing-coding"
     },
     {
       img: digitalMarketing,
       title: "Boost Your Online Presence with Digital Marketing Services",
       tags: ["Digital Marketing", "Online Growth"],
+      blogRoutes: "/blog/ai-replacing-coding"
     },
     {
       img: customApp,
       title: "Why Every Business Needs Custom Application Development in 2025?",
       tags: ["Custom Software", "App Development"],
+      blogRoutes: "/blog/ai-replacing-coding"
     },
   ]);
 
