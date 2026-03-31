@@ -182,7 +182,7 @@ const BrandIntroSection = () => {
         <div className="relative h-[15em] sm:h-[18em] md:h-[25em] lg:h-[8em] w-[25em] sm:w-[35em] md:w-[40em] lg:w-[13em] bg-gray-500 rounded-2xl overflow-hidden">
           <video
             autoPlay
-            loop
+            loop 
             muted
             playsInline
             className="w-full h-full object-cover"

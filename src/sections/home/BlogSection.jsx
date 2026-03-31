@@ -4,31 +4,31 @@ import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import blockchain from "../../assets/images/blogImg/blockchain.jpg";
-import digitalMarketing from "../../assets/images/blogImg/digitalMarketing.jpg";
-import customApp from "../../assets/images/blogImg/customApp.jpg";
+import AiTransformingECommerceImg from "../../assets/images/blogImg/AiTransformingECommerceImg.jpg";
+import AiReplacingCodingImg from "../../assets/images/blogImg/AiReplacingCodingImg.jpg";
+import AiReplacingSDEImg from "../../assets/images/blogImg/AiReplacingSDEImg.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([
     {
-      img: blockchain,
-      title: "How AI is Replacing Traditional Coding (Reality in 2026)",
-      tags: ["Artificial Intelligence", "Programming"],
-      blogRoutes: "/blog/ai-replacing-coding",
+      img: AiTransformingECommerceImg,
+      title: "How AI is Transforming E-Commerce in 2026",
+      tags: ["E-Commerce", "AI Business"],
+      blogRoutes: "/blog/ai-transforming-e-commerce",
     },
     {
-      img: digitalMarketing,
+      img: AiReplacingSDEImg,
       title: "Will AI Replace Software Developers? Truth Explained (2026)",
       tags: ["Software Development", "AI Careers"],
       blogRoutes: "/blog/ai-replacing-SDE",
     },
     {
-      img: customApp,
-      title: "How AI is Transforming E-Commerce in 2026",
-      tags: ["E-Commerce", "AI Business"],
-      blogRoutes: "/blog/ai-transforming-e-commerce",
+      img: AiReplacingCodingImg,
+      title: "How AI is Replacing Traditional Coding (Reality in 2026)",
+      tags: ["Artificial Intelligence", "Programming"],
+      blogRoutes: "/blog/ai-replacing-coding",
     },
   ]);
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import BlogIntro from "../../components/blog/BlogIntro";
-import VRgirlImg from "../../assets/images/blogImg/blockchain.jpg";
+import AiReplacingSDEImg from "../../assets/images/blogImg/AiReplacingSDEImg.jpg";
 import StartProjectSection from "../../sections/home/StartProjectSection";
 import FooterSection from "../../sections/home/FooterSection";
 import AiReplacingSDESection from "../../sections/blog/AiReplacingSDESection";
@@ -11,7 +11,7 @@ const AiReplacingSDE = () => {
     {
       title: "Will AI Replace Software Developers? Truth Explained (2026)",
       tags: ["AI", "Coding", "Technology", "Future", "Programming"],
-      img: VRgirlImg,
+      img: AiReplacingSDEImg,
     });
 
   return (

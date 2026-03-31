@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import BlogIntro from "../../components/blog/BlogIntro";
-import VRgirlImg from "../../assets/images/blogImg/blockchain.jpg";
+import AiReplacingCodingImg from "../../assets/images/blogImg/AiReplacingCodingImg.jpg";
 import StartProjectSection from "../../sections/home/StartProjectSection";
 import FooterSection from "../../sections/home/FooterSection";
 import AiReplacingCodingSection from "../../sections/blog/AiReplacingCodingSection";
 
-const aiReplacingCoding = () => {
+const AiReplacingCoding = () => {
   const [blogs, setBlogs] = useState(
     {
       title: "How AI is Replacing Traditional Coding: Reality in 2026",
       tags: ["AI", "Coding", "Technology", "Future", "Programming"],
-      img: VRgirlImg,
+      img: AiReplacingCodingImg,
     });
 
   return (
@@ -26,4 +26,4 @@ const aiReplacingCoding = () => {
   );
 };
 
-export default aiReplacingCoding;
+export default AiReplacingCoding;

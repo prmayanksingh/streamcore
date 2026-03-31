@@ -1,12 +1,22 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogShowcase = ({ img }) => {
   const containerRef = useRef(null);
   const imgRef = useRef(null);
+  const fadeinRef = useRef();
+
+  useEffect(() => {
+    gsap.from(fadeinRef.current, {
+      opacity: 0,
+      duration: 1.7,
+      delay: .8,
+      ease: "power3.out",
+    });
+  }, []);
 
   useLayoutEffect(() => {
     gsap.to(imgRef.current, {
@@ -22,7 +32,7 @@ const BlogShowcase = ({ img }) => {
   }, []);
 
   return (
-    <section className="h-[45rem] sm:h-[50em] md:h-[55rem] xl:h-[65rem] w-full py-[5em]">
+    <section ref={fadeinRef} className="h-[45rem] sm:h-[50em] md:h-[55rem] xl:h-[65rem] w-full py-[5em]">
       <div
         ref={containerRef}
         className="h-full w-full bg-gray-500 rounded-4xl overflow-hidden flex items-center justify-center"

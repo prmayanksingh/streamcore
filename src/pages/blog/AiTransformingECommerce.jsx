@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import BlogIntro from "../../components/blog/BlogIntro";
-import VRgirlImg from "../../assets/images/blogImg/blockchain.jpg";
+import AiTransformingECommerceImg from "../../assets/images/blogImg/AiTransformingECommerceImg.jpg";
 import StartProjectSection from "../../sections/home/StartProjectSection";
 import FooterSection from "../../sections/home/FooterSection";
 import AiTransformingECommerceSection from "../../sections/blog/AiTransformingECommerceSection";
@@ -11,7 +11,7 @@ const AiTransformingECommerce = () => {
     {
       title: "How AI is Transforming E-Commerce in 2026",
       tags: ["AI", "E-Commerce", "Future", "Programming"],
-      img: VRgirlImg,
+      img: AiTransformingECommerceImg,
     });
 
   return (
