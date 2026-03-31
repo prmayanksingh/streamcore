@@ -30,7 +30,7 @@ const BlogCard = ({ blog }) => {
     >
       <div
         ref={containerRef}
-        className="relative h-[28em] md:h-[34em] xl:h-[30em] w-full rounded-4xl overflow-hidden group flex items-center justify-center"
+        className="relative h-[28em] md:h-[34em] xl:h-[29em] w-full rounded-4xl overflow-hidden group flex items-center justify-center"
       >
         <img
           ref={imgRef}

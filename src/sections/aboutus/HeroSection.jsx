@@ -50,7 +50,10 @@ const HeroSection = () => {
         >
           We create brilliance together
         </h1>
-        <p ref={descriptionRef} className="text-[clamp(20px,3vw,25px)] leading-[1.6em]">
+        <p
+          ref={descriptionRef}
+          className="text-[clamp(20px,3vw,25px)] leading-[1.6em]"
+        >
           We are a creative digital agency passionate about transforming ideas
           into exceptional digital experiences. We help you showcase your
           projects, services, and expertise with maximum impact.

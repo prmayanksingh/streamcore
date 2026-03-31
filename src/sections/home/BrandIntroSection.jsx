@@ -86,7 +86,7 @@ const BrandIntroSection = () => {
   }, []);
 
   return (
-    <section className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col gap-[2em] lg:gap-[7em] lg:px-[3em]">
+    <section className="relative text-[clamp(.7em,3.5vw,1em)] md:text-[clamp(1em,1vw,1.5em)] lg:text-[clamp(1.2em,1.5vw,1em)] flex flex-col items-center gap-[2em] lg:gap-[7em] lg:px-[3em]">
       <div className="z-100 h-[30rem] lg:h-[20rem] flex flex-col justify-center items-center md:gap-[1em] text-center">
         <div
           ref={heading1Ref}

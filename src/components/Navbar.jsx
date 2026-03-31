@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     gsap.from(fadeinRef.current, {
-      // opacity: 0,
+      opacity: 0,
       duration: 1.7,
       delay: .8,
       ease: "power3.out",
