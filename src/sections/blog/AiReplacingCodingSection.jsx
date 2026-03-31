@@ -1,6 +1,6 @@
 import React from "react";
 
-const AiReplactingCodingSection = () => {
+const AiReplacingCodingSection = () => {
   return (
     <section className="px-[2em] md:px-[4em] pb-[4em] flex flex-col xl:items-center gap-[5em]">
       <div className="xl:w-[60%] text-[1.7em] md:text-[1.8em]">
@@ -15,12 +15,12 @@ const AiReplactingCodingSection = () => {
         </p>
       </div>
       <div className="xl:w-[60%] text-[1.3em] text-[#969696] flex flex-col gap-[1.2em]">
-        <p>
+        <b>
           - Is traditional coding becoming obsolete, or is it evolving into
           something new?
-        </p>
+        </b>
         <p></p>
-        <p>1. Evolution of Coding: From Manual to AI-Assisted</p>
+        <b>1. Evolution of Coding: From Manual to AI-Assisted</b>
         <p>To understand the shift, let’s look at how coding has evolved:</p>
         <p></p>
         <p>Traditional Coding (Before AI)</p>
@@ -29,7 +29,7 @@ const AiReplactingCodingSection = () => {
         <p>- Searching documentation for solutions</p>
         <p>- High dependency on experience</p>
         <p></p>
-        <p>Modern AI-Assisted Development (2026)</p>
+        <b>Modern AI-Assisted Development (2026)</b>
         <p>- Code generated via prompts</p>
         <p>- Real-time debugging and suggestions</p>
         <p>- Auto-completion of entire functions</p>
@@ -39,34 +39,34 @@ const AiReplactingCodingSection = () => {
           designers
         </p>
         <p></p>
-        <p>2. What AI Can Actually Do in 2026</p>
+        <b>2. What AI Can Actually Do in 2026</b>
         <p>AI capabilities have grown far beyond simple autocomplete.</p>
         <p></p>
-        <p>Full Code Generation</p>
+        <b>Full Code Generation</b>
         <p>You can describe a feature, and AI can generate:</p>
         <p>- Frontend UI (React, HTML, CSS)</p>
         <p>- Backend APIs (Node.js, Python)</p>
         <p>- Database schemas</p>
         <p></p>
-        <p>Intelligent Debugging</p>
+        <b>Intelligent Debugging</b>
         <p>AI can:</p>
         <p>- Identify logical errors</p>
         <p>- Suggest optimized solutions</p>
         <p>- Explain why the error occurred</p>
         <p></p>
-        <p>Code Refactoring & Optimization</p>
+        <b>Code Refactoring & Optimization</b>
         <p>AI improves:</p>
         <p>- Code readability</p>
         <p>- Performance</p>
         <p>- Structure</p>
         <p></p>
-        <p>End-to-End Application Development</p>
+        <b>End-to-End Application Development</b>
         <p>With the right prompts, AI can build:</p>
         <p>- Portfolio websites</p>
         <p>- Dashboards</p>
         <p>- Basic SaaS applications</p>
         <p></p>
-        <p>3. Technologies Powering This Revolution</p>
+        <b>3. Technologies Powering This Revolution</b>
         <p>This transformation is driven by:</p>
         <p>- Large Language Models (LLMs)</p>
         <p>- Natural Language Processing (NLP)</p>
@@ -77,118 +77,118 @@ const AiReplactingCodingSection = () => {
           logic
         </p>
         <p></p>
-        <p>4. What AI is Replacing (Real Impact)</p>
+        <b>4. What AI is Replacing (Real Impact)</b>
         <p>
           Let’s be very clear—AI is replacing certain parts of traditional
           coding:
         </p>
         <p></p>
-        <p>Repetitive Coding Tasks</p>
+        <b>Rebetitive Coding Tasks</b>
         <p>- Boilerplate code</p>
         <p>- CRUD operations</p>
         <p>- Basic UI layouts</p>
         <p></p>
-        <p>Junior-Level Tasks</p>
+        <b>Junior-Level Tasks</b>
         <p>- Simple bug fixes</p>
         <p>- Basic API integrations</p>
         <p>- Standard implementations</p>
         <p></p>
-        <p>Time-Consuming Work</p>
+        <b>Time-Consuming Work</b>
         <p>-Writing documentation</p>
         <p>-Searching for syntax</p>
         <p>-Debugging simple errors</p>
         <p>This means entry-level coding roles are changing significantly.</p>
         <p></p>
-        <p>5. What AI Cannot Replace (Yet)</p>
+        <b>5. What AI Cannot Replace (Yet)</b>
         <p>Despite its power, AI has limitations:</p>
         <p></p>
-        <p>Deep Problem Solving</p>
+        <b>Deep Problem Solving</b>
         <p>AI lacks true understanding of:</p>
         <p>- Complex business logic</p>
         <p>- Real-world constraints</p>
         <p></p>
-        <p>System Architecture</p>
+        <b>System Architecture</b>
         <p>Designing scalable systems requires:</p>
         <p>- Experience</p>
         <p>- Strategic thinking</p>
         <p></p>
-        <p>Innovation & Creativity</p>
+        <b>Innovation & Creativity</b>
         <p>
           AI generates based on existing data—it does not create truly original
           ideas.
         </p>
         <p></p>
-        <p>Security & Critical Systems</p>
+        <b>Security & Critical Systems</b>
         <p>Human expertise is essential for:</p>
         <p>- Security decisions</p>
         <p>- High-risk applications</p>
         <p></p>
-        <p>6. The New Role of Developers in 2026</p>
+        <b>6. The New Role of Developers in 2026</b>
         <p>The developer role is evolving into:</p>
-        <p>AI Supervisor</p>
+        <b>AI Supervisor</b>
         <p>- Guide AI with proper prompts</p>
         <p>- Validate outputs</p>
         <p></p>
-        <p>System Designer</p>
+        <b>System Designer</b>
         <p>Focus on architecture, not just code</p>
         <p></p>
-        <p>Productivity Engineer</p>
+        <b>Productivity Engineer</b>
         <p>- Build faster using AI tools</p>
         <p>
           The focus is shifting from “coding skills” → “thinking +
           problem-solving + AI usage”
         </p>
         <p></p>
-        <p>7. Impact on Jobs and Careers</p>
+        <b>7. Impact on Jobs and Careers</b>
         <p>This shift is reshaping the job market:</p>
         <p></p>
-        <p>Declining Demand</p>
+        <b>Declining Demand</b>
         <p>- Basic coders</p>
         <p>- Repetitive development roles</p>
         <p></p>
-        <p>Increasing Demand</p>
+        <b>Increasing Demand</b>
         <p>- AI-integrated developers</p>
         <p>- Full stack developers</p>
         <p>- Problem solvers</p>
         <p>- System architects</p>
         <p>Companies now prefer fewer but highly skilled developers.</p>
         <p></p>
-        <p>8. How Students & Developers Should Adapt</p>
+        <b>8. How Students & Developers Should Adapt</b>
         <p>To stay relevant, you must evolve:</p>
         <p></p>
-        <p>Learn Fundamentals</p>
+        <b>Learn Fundamentals</b>
         <p>- Programming logic</p>
         <p>- Data structures</p>
         <p>- Core concepts</p>
         <p></p>
-        <p>Master AI Tools</p>
+        <b>Master AI Tools</b>
         <p>- Use AI for coding, debugging, learning</p>
         <p></p>
-        <p>Focus on Real Projects</p>
+        <b>Focus on Real Projects</b>
         <p>- Build applications, not just theory</p>
         <p></p>
-        <p>Improve Problem-Solving Skills</p>
+        <b>Improve Problem-Solving Skills</b>
         <p>- This is your biggest advantage over AI</p>
         <p></p>
-        <p>Learn System Design (Early)</p>
+        <b>Learn System Design (Early)</b>
         <p>- Think like an engineer, not just a coder</p>
         <p></p>
-        <p>9. Risks & Challenges of AI Coding</p>
+        <b>9. Risks & Challenges of AI Coding</b>
         <p>AI is powerful—but not perfect:</p>
         <p></p>
-        <p>Overdependence</p>
+        <b>Overdependence</b>
         <p>Students may rely too much on AI without understanding.</p>
         <p></p>
-        <p>Incorrect Code</p>
+        <b>Incorrect Code</b>
         <p>AI can generate:</p>
         <p>- Buggy logic</p>
         <p>- Security vulnerabilities</p>
         <p></p>
-        <p>Reduced Deep Learning</p>
+        <b>Reduced Deep Learning</b>
         <p>Less manual coding may reduce fundamental understanding.</p>
         <p>The key is balance: Use AI, but don’t depend blindly.</p>
         <p></p>
-        <p>10. The Future of Coding</p>
+        <b>10. The Future of Coding</b>
         <p>The future is not “no coding”—it’s different coding:</p>
         <p>- More automation</p>
         <p>- Faster development cycles</p>
@@ -228,4 +228,4 @@ const AiReplactingCodingSection = () => {
   );
 };
 
-export default AiReplactingCodingSection;
+export default AiReplacingCodingSection;

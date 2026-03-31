@@ -4,12 +4,12 @@ import BlogIntro from "../../components/blog/BlogIntro";
 import VRgirlImg from "../../assets/images/blogImg/blockchain.jpg";
 import StartProjectSection from "../../sections/home/StartProjectSection";
 import FooterSection from "../../sections/home/FooterSection";
-import AiReplacingCodingSection from "../../sections/blog/AiReplacingCodingSection";
+import AiReplacingSDESection from "../../sections/blog/AiReplacingSDESection";
 
-const aiReplacingCoding = () => {
+const AiReplacingSDE = () => {
   const [blogs, setBlogs] = useState(
     {
-      title: "How AI is Replacing Traditional Coding: Reality in 2026",
+      title: "Will AI Replace Software Developers? Truth Explained (2026)",
       tags: ["AI", "Coding", "Technology", "Future", "Programming"],
       img: VRgirlImg,
     });
@@ -19,11 +19,11 @@ const aiReplacingCoding = () => {
       <Navbar />
       <div className="h-[5em] lg:h-[8em] xl:h-[9em] w-full"></div>
       <BlogIntro blog={blogs} />
-      <AiReplacingCodingSection />
+      <AiReplacingSDESection />
       <StartProjectSection />
       <FooterSection />
     </div>
   );
 };
 
-export default aiReplacingCoding;
+export default AiReplacingSDE;

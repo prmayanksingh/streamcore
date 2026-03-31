@@ -4,9 +4,9 @@ import FlipLink from "../../components/ui/FlipLink";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import blockchain from '../../assets/images/blogImg/blockchain.jpg'
-import digitalMarketing from '../../assets/images/blogImg/digitalMarketing.jpg'
-import customApp from '../../assets/images/blogImg/customApp.jpg'
+import blockchain from "../../assets/images/blogImg/blockchain.jpg";
+import digitalMarketing from "../../assets/images/blogImg/digitalMarketing.jpg";
+import customApp from "../../assets/images/blogImg/customApp.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,21 +14,21 @@ const BlogSection = () => {
   const [blogData, setBlogData] = useState([
     {
       img: blockchain,
-      title: "Short Guide on the Potential of Blockchain for Businesses",
-      tags: ["Blockchain", "Business Technology"],
-      blogRoutes: "/blog/ai-replacing-coding"
+      title: "How AI is Replacing Traditional Coding (Reality in 2026)",
+      tags: ["Artificial Intelligence", "Programming"],
+      blogRoutes: "/blog/ai-replacing-coding",
     },
     {
       img: digitalMarketing,
-      title: "Boost Your Online Presence with Digital Marketing Services",
-      tags: ["Digital Marketing", "Online Growth"],
-      blogRoutes: "/blog/ai-replacing-coding"
+      title: "Will AI Replace Software Developers? Truth Explained (2026)",
+      tags: ["Software Development", "AI Careers"],
+      blogRoutes: "/blog/ai-replacing-SDE",
     },
     {
       img: customApp,
-      title: "Why Every Business Needs Custom Application Development in 2025?",
-      tags: ["Custom Software", "App Development"],
-      blogRoutes: "/blog/ai-replacing-coding"
+      title: "How AI is Transforming E-Commerce in 2026",
+      tags: ["E-Commerce", "AI Business"],
+      blogRoutes: "/blog/ai-transforming-e-commerce",
     },
   ]);
 

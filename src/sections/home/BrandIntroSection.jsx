@@ -232,7 +232,7 @@ const BrandIntroSection = () => {
       />
       <img
         ref={(el) => (fadeinRef.current[1] = el)}
-        className="hidden md:inline absolute z-101 h-[9em] lg:h-[9em] xl:h-[11em] left-[73%] md:left-[74%] xl:left-[71%] top-[2%] md:top-[5%] lg:top-[-7%] xl:top-[-10%]"
+        className="hidden md:inline absolute z-101 h-[9em] lg:h-[9em] xl:h-[11em] left-[73%] md:left-[74%] xl:left-[69%] top-[2%] md:top-[5%] lg:top-[-7%] xl:top-[-10%]"
         src={astroHelmetImg}
         alt="AstroHelmet Image"
       />
