@@ -2,6 +2,7 @@ import "./style/font.css";
 import MainRoute from "./routes/MainRoute";
 import ReactLenis from "lenis/react";
 import ScrollToTop from "./components/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       >
         <ScrollToTop />
         <MainRoute />
+        <ToastContainer position="top-right" />
       </ReactLenis>
     </div>
   );
